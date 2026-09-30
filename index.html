@@ -3,78 +3,508 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Maidh Taxi Service - Professional taxi and travel service. Call or WhatsApp for booking.">
-<title>Maidh Taxi Service</title>
+
+<meta name="description" content="Maidh Taxi Service - Professional and reliable taxi service for local and outstation travel.">
+
+<title>Maidh Taxi Service | Professional Taxi Booking</title>
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
-header{background:linear-gradient(135deg,#111827,#243b6b);color:white;text-align:center;padding:45px 20px}
-header h1{font-size:40px;margin:0 0 10px}
-header p{font-size:18px;margin:0}
-.container{max-width:950px;margin:auto;padding:20px}
-.hero,.card{background:white;border-radius:20px;padding:28px;margin:20px 0;box-shadow:0 8px 25px #00000012}
-.hero{text-align:center}
-.hero h2{font-size:30px;margin:5px 0 12px}
-.hero p{line-height:1.6}
-.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
-.btn{display:inline-block;padding:15px 24px;border-radius:12px;text-decoration:none;font-weight:bold}
-.call{background:#111827;color:white}
-.whatsapp{background:#198754;color:white}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
-.service{padding:20px;border:1px solid #e1e5eb;border-radius:15px}
-.service h3{margin-top:0}
-form{display:grid;gap:13px}
-label{font-weight:bold}
-input,select{width:100%;padding:13px;border:1px solid #ccd2dc;border-radius:10px;font-size:16px}
-button{background:#111827;color:white;border:0;padding:15px;border-radius:10px;font-size:16px;font-weight:bold}
-.note{font-size:14px;color:#667085;line-height:1.5}
-footer{text-align:center;padding:25px;color:#667085}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f6f8;
+color:#172033;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(135deg,#101827,#263b5c);
+color:white;
+padding:22px 18px 70px;
+text-align:center;
+}
+
+.logo{
+font-size:16px;
+letter-spacing:2px;
+font-weight:bold;
+opacity:.85;
+}
+
+header h1{
+font-size:42px;
+margin:18px 0 8px;
+}
+
+header p{
+font-size:18px;
+margin:0;
+opacity:.9;
+}
+
+.container{
+max-width:1050px;
+margin:-38px auto 0;
+padding:0 18px 30px;
+}
+
+.hero{
+background:white;
+border-radius:24px;
+padding:34px 25px;
+text-align:center;
+box-shadow:0 12px 35px rgba(0,0,0,.12);
+}
+
+.hero h2{
+font-size:30px;
+margin:0 0 8px;
+}
+
+.hero p{
+color:#5d6878;
+max-width:650px;
+margin:0 auto;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 22px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.call{
+background:#172033;
+color:white;
+}
+
+.whatsapp{
+background:#168a55;
+color:white;
+}
+
+.section{
+background:white;
+border-radius:22px;
+padding:28px;
+margin-top:22px;
+box-shadow:0 7px 25px rgba(0,0,0,.07);
+}
+
+.section h2{
+margin-top:0;
+font-size:25px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+gap:16px;
+}
+
+.card{
+border:1px solid #e2e6eb;
+border-radius:16px;
+padding:21px;
+background:#fff;
+}
+
+.card h3{
+margin-top:0;
+font-size:19px;
+}
+
+.trust{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:12px;
+}
+
+.trust div{
+background:#f7f9fb;
+padding:18px;
+border-radius:14px;
+text-align:center;
+font-weight:bold;
+}
+
+form{
+display:grid;
+gap:13px;
+}
+
+label{
+font-weight:bold;
+font-size:15px;
+}
+
+input,select,textarea{
+width:100%;
+padding:13px;
+border:1px solid #cfd5dd;
+border-radius:10px;
+font-size:16px;
+font-family:inherit;
+}
+
+textarea{
+min-height:85px;
+resize:vertical;
+}
+
+.location-row{
+display:grid;
+grid-template-columns:1fr auto;
+gap:8px;
+}
+
+.map-btn{
+border:0;
+border-radius:10px;
+padding:0 14px;
+background:#263b5c;
+color:white;
+font-weight:bold;
+}
+
+.submit{
+background:#168a55;
+color:white;
+border:0;
+padding:16px;
+border-radius:11px;
+font-size:17px;
+font-weight:bold;
+margin-top:5px;
+}
+
+.note{
+font-size:14px;
+color:#687386;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+color:#263b5c;
+font-weight:bold;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:28px 15px;
+color:#687386;
+font-size:14px;
+}
+
+@media(max-width:600px){
+header h1{font-size:32px}
+.hero h2{font-size:25px}
+.section{padding:22px 18px}
+.location-row{grid-template-columns:1fr}
+.map-btn{padding:12px}
+}
 </style>
 </head>
 
 <body>
 
 <header>
+<div class="logo">PROFESSIONAL TRAVEL SERVICE</div>
 <h1>🚕 Maidh Taxi Service</h1>
-<p>Professional & Reliable Taxi Service</p>
+<p>Reliable Travel • Professional Service • Easy Booking</p>
 </header>
 
 <div class="container">
 
 <section class="hero">
-<h2>Book Your Ride</h2>
-<p>Travel comfortably with Maidh Taxi Service. Contact us for local and outstation trips.</p>
+<h2>Book Your Ride With Confidence</h2>
+<p>
+Comfortable local and outstation travel with professional service.
+Send your booking details directly to us on WhatsApp.
+</p>
 
 <div class="buttons">
-<a class="btn call" href="tel:+919467670607">📞 Call 9467670607</a>
-<a class="btn whatsapp" href="https://wa.me/919467670607" target="_blank">💬 WhatsApp Booking</a>
+<a class="btn call" href="tel:+919467670607">📞 Call Us</a>
+<a class="btn whatsapp" href="https://wa.me/919467670607" target="_blank">
+💬 WhatsApp Booking
+</a>
 </div>
 </section>
 
-<section class="card">
+
+<section class="section">
+<h2>Why Choose Maidh Taxi Service?</h2>
+
+<div class="trust">
+<div>🚕 Professional Service</div>
+<div>📲 Easy WhatsApp Booking</div>
+<div>📍 Pickup & Drop Details</div>
+<div>🤝 Clear Booking Terms</div>
+</div>
+</section>
+
+
+<section class="section">
 <h2>Our Services</h2>
 
 <div class="grid">
-<div class="service">
-<h3>🚕 Local Trips</h3>
-<p>Convenient taxi service for local travel.</p>
+
+<div class="card">
+<h3>🚕 Local Travel</h3>
+<p>Taxi service for local journeys and daily travel requirements.</p>
 </div>
 
-<div class="service">
-<h3>🛣️ Outstation Trips</h3>
-<p>Comfortable travel for longer journeys.</p>
+<div class="card">
+<h3>🛣️ Outstation Travel</h3>
+<p>Comfortable taxi service for longer-distance journeys.</p>
 </div>
 
-<div class="service">
-<h3>🚗 Car Options</h3>
-<p>Choose the car according to your trip requirements.</p>
+<div class="card">
+<h3>🚗 Car Requirements</h3>
+<p>Select the type of vehicle required according to your trip.</p>
 </div>
 
-<div class="service">
+<div class="card">
 <h3>👨‍✈️ Professional Drivers</h3>
-<p>Reliable and courteous service for your journey.</p>
+<p>Service focused on comfortable and responsible travel.</p>
 </div>
+
+</div>
+</section>
+
+
+<section class="section">
+<h2>📋 Booking Request</h2>
+
+<form id="bookingForm">
+
+<label>Rider / Booking Person Name *</label>
+<input id="name" required>
+
+<label>Mobile Number *</label>
+<input id="mobile" type="tel" required>
+
+<label>ID *</label>
+<input id="id" required>
+
+<label>Pickup Location *</label>
+
+<div class="location-row">
+<input id="pickup" placeholder="Enter pickup location" required>
+
+<button type="button" class="map-btn"
+onclick="openMaps('pickup')">
+📍 Maps
+</button>
+</div>
+
+
+<label>Drop Location *</label>
+
+<div class="location-row">
+<input id="drop" placeholder="Enter drop location" required>
+
+<button type="button" class="map-btn"
+onclick="openMaps('drop')">
+📍 Maps
+</button>
+</div>
+
+
+<label>Reference (optional)</label>
+<input id="reference" placeholder="Reference / referral">
+
+<label>Number of Persons *</label>
+<input id="persons" type="number" min="1" required>
+
+<label>Number of Booking Days *</label>
+<input id="days" type="number" min="1" required>
+
+<label>Type of Car Required *</label>
+
+<select id="car" required>
+<option value="">Select vehicle type</option>
+<option>Sedan</option>
+<option>SUV</option>
+<option>Other / Discuss on WhatsApp</option>
+</select>
+
+
+<label>How did you hear about us?</label>
+
+<select id="source">
+<option value="">Select</option>
+<option>Google Search</option>
+<option>Google Maps</option>
+<option>WhatsApp</option>
+<option>Reference</option>
+<option>Other</option>
+</select>
+
+
+<label>Additional Requirement</label>
+<textarea id="message"
+placeholder="Any special requirement or travel information"></textarea>
+
+
+<button class="submit" type="submit">
+📲 Send Booking Request on WhatsApp
+</button>
+
+</form>
+
+<p class="note">
+Before final confirmation, please confirm driving hours, driver food,
+waiting hours, night charges and any extra driving charges with the service team.
+</p>
+
+</section>
+
+
+<section class="section">
+<h2>💳 Payment Information</h2>
+
+<p>
+<strong>Payment schedule:</strong>
+20% at booking, 60% at pickup and 20% before drop,
+according to the agreed trip terms.
+</p>
+
+<p>
+Payment can be made to the office account or UPI/scanner name
+<strong>Gurvinder pal singh</strong>.
+</p>
+
+<p class="note">
+Please confirm the final amount and payment details with the service team before payment.
+</p>
+
+</section>
+
+
+<section class="section">
+<h2>⭐ Customer Feedback</h2>
+
+<p>
+After your trip, you can send your service feedback and rating directly
+through WhatsApp.
+</p>
+
+<div class="buttons">
+
+<a class="btn whatsapp"
+href="https://wa.me/919467670607?text=Maidh%20Taxi%20Service%20Feedback%0A%0ARating:%20%2F5%0A%0AFeedback:"
+target="_blank">
+⭐ Give Feedback on WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+<section class="section contact">
+<h2>📞 Contact Us</h2>
+
+<p>
+<strong>Maidh Taxi Service</strong>
+</p>
+
+<p>
+📱 <a href="tel:+919467670607">9467670607</a>
+</p>
+
+<p>
+📧 <a href="mailto:maidhtaxiserviceambala@gmail.com">
+maidhtaxiserviceambala@gmail.com
+</a>
+</p>
+
+<p>
+💬 WhatsApp is our main booking and customer communication channel.
+</p>
+
+</section>
+
+</div>
+
+
+<footer>
+© Maidh Taxi Service · 9467670607<br>
+Professional Taxi & Travel Service
+</footer>
+
+
+<script>
+
+function openMaps(type){
+
+let value=document.getElementById(type).value.trim();
+
+if(!value){
+alert("Please enter the location first.");
+return;
+}
+
+window.open(
+"https://www.google.com/maps/search/?api=1&query="+
+encodeURIComponent(value),
+"_blank"
+);
+
+}
+
+
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+function get(id){
+return document.getElementById(id).value.trim();
+}
+
+let message =
+"🚕 MAIDH TAXI SERVICE - BOOKING REQUEST\n\n"+
+"Name: "+get("name")+"\n"+
+"Mobile: "+get("mobile")+"\n"+
+"ID: "+get("id")+"\n"+
+"Pickup: "+get("pickup")+"\n"+
+"Drop: "+get("drop")+"\n"+
+"Reference: "+(get("reference")||"None")+"\n"+
+"Persons: "+get("persons")+"\n"+
+"Booking Days: "+get("days")+"\n"+
+"Car Required: "+get("car")+"\n"+
+"How Heard: "+(get("source")||"Not specified")+"\n"+
+"Additional Requirement: "+(get("message")||"None");
+
+window.open(
+"https://wa.me/919467670607?text="+
+encodeURIComponent(message),
+"_blank"
+);
+
+});
+
+</script>
+
+</body>
+</html>
 </div>
 </section>
 
