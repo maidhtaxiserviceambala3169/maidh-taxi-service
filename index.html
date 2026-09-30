@@ -1,1 +1,158 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Maidh Taxi Service - professional taxi service for local and outstation travel."><title>Maidh Taxi Service</title><style>*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}header{background:#111827;color:#fff;text-align:center;padding:42px 20px}h1{margin:0 0 10px;font-size:38px}.wrap{max-width:980px;margin:auto;padding:22px}.card{background:#fff;border-radius:18px;padding:26px;margin:18px 0;box-shadow:0 8px 28px rgba(0,0,0,.08)}.hero{text-align:center}.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}.btn{display:inline-block;text-decoration:none;padding:14px 22px;border-radius:12px;font-weight:700}.primary{background:#111827;color:#fff}.secondary{background:#e8eefc;color:#173b8f}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.item{padding:18px;border:1px solid #e4e7ec;border-radius:14px}form{display:grid;gap:12px}label{font-weight:700}input,textarea{width:100%;padding:13px;border:1px solid #d0d5dd;border-radius:10px;font-size:16px}.submit{border:0;background:#111827;color:#fff;padding:14px;border-radius:10px;font-weight:700;font-size:16px}.note{font-size:14px;color:#667085}.footer{text-align:center;padding:25px;color:#667085}</style></head><body><header><h1>Maidh Taxi Service</h1><p>Professional and reliable taxi service for your journey</p></header><main class="wrap"><section class="card hero"><h2>Book Your Ride</h2><p>Send your trip details and contact us to confirm your booking.</p><div class="buttons"><a class="btn primary" href="tel:+919467670607">Call 9467670607</a><a class="btn secondary" href="https://wa.me/919467670607" target="_blank">WhatsApp Booking</a></div></section><section class="card"><h2>Our Services</h2><div class="grid"><div class="item"><h3>🚕 Local & Outstation</h3><p>Options for local and longer journeys.</p></div><div class="item"><h3>🚗 Multiple Car Options</h3><p>Choose the car type for your trip.</p></div><div class="item"><h3>🧑‍✈️ Professional Drivers</h3><p>Dependable and courteous travel service.</p></div></div></section><section class="card"><h2>Booking Request</h2><form id="bookingForm"><div><label>Name *</label><input id="name" required></div><div><label>Mobile Number *</label><input id="mobile" type="tel" required></div><div><label>ID *</label><input id="id" required></div><div><label>Reference (optional)</label><input id="reference"></div><div><label>Number of Persons *</label><input id="persons" type="number" min="1" required></div><div><label>Booking Days *</label><input id="days" type="number" min="1" required></div><div><label>Car Required *</label><input id="car" required></div><div><label>How did you hear about us?</label><input id="source"></div><button class="submit" type="submit">Send Booking Request on WhatsApp</button></form><p class="note">Driving hours, driver food, waiting hours, night charges and extra driving should be confirmed before final booking.</p></section><section class="card"><h2>Payment Information</h2><p><strong>Payment schedule:</strong> 20% at booking, 60% at pickup and 20% before drop, according to agreed trip terms.</p><p>Payments can be made to the office account or UPI/scanner name <strong>Gurvinder pal singh</strong>.</p></section></main><div class="footer">© Maidh Taxi Service · 9467670607</div><script>document.getElementById('bookingForm').addEventListener('submit',function(e){e.preventDefault();const v=id=>document.getElementById(id).value.trim();const msg=`Maidh Taxi Service Booking Request\nName: ${v('name')}\nMobile: ${v('mobile')}\nID: ${v('id')}\nReference: ${v('reference')||'None'}\nPersons: ${v('persons')}\nBooking days: ${v('days')}\nCar required: ${v('car')}\nHow heard: ${v('source')||'Not specified'}\n\nPlease confirm booking terms and total fare.`;location.href='https://wa.me/919467670607?text='+encodeURIComponent(msg)});</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Maidh Taxi Service - Professional taxi and travel service. Call or WhatsApp for booking.">
+<title>Maidh Taxi Service</title>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
+header{background:linear-gradient(135deg,#111827,#243b6b);color:white;text-align:center;padding:45px 20px}
+header h1{font-size:40px;margin:0 0 10px}
+header p{font-size:18px;margin:0}
+.container{max-width:950px;margin:auto;padding:20px}
+.hero,.card{background:white;border-radius:20px;padding:28px;margin:20px 0;box-shadow:0 8px 25px #00000012}
+.hero{text-align:center}
+.hero h2{font-size:30px;margin:5px 0 12px}
+.hero p{line-height:1.6}
+.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;padding:15px 24px;border-radius:12px;text-decoration:none;font-weight:bold}
+.call{background:#111827;color:white}
+.whatsapp{background:#198754;color:white}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
+.service{padding:20px;border:1px solid #e1e5eb;border-radius:15px}
+.service h3{margin-top:0}
+form{display:grid;gap:13px}
+label{font-weight:bold}
+input,select{width:100%;padding:13px;border:1px solid #ccd2dc;border-radius:10px;font-size:16px}
+button{background:#111827;color:white;border:0;padding:15px;border-radius:10px;font-size:16px;font-weight:bold}
+.note{font-size:14px;color:#667085;line-height:1.5}
+footer{text-align:center;padding:25px;color:#667085}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🚕 Maidh Taxi Service</h1>
+<p>Professional & Reliable Taxi Service</p>
+</header>
+
+<div class="container">
+
+<section class="hero">
+<h2>Book Your Ride</h2>
+<p>Travel comfortably with Maidh Taxi Service. Contact us for local and outstation trips.</p>
+
+<div class="buttons">
+<a class="btn call" href="tel:+919467670607">📞 Call 9467670607</a>
+<a class="btn whatsapp" href="https://wa.me/919467670607" target="_blank">💬 WhatsApp Booking</a>
+</div>
+</section>
+
+<section class="card">
+<h2>Our Services</h2>
+
+<div class="grid">
+<div class="service">
+<h3>🚕 Local Trips</h3>
+<p>Convenient taxi service for local travel.</p>
+</div>
+
+<div class="service">
+<h3>🛣️ Outstation Trips</h3>
+<p>Comfortable travel for longer journeys.</p>
+</div>
+
+<div class="service">
+<h3>🚗 Car Options</h3>
+<p>Choose the car according to your trip requirements.</p>
+</div>
+
+<div class="service">
+<h3>👨‍✈️ Professional Drivers</h3>
+<p>Reliable and courteous service for your journey.</p>
+</div>
+</div>
+</section>
+
+<section class="card">
+<h2>Booking Request</h2>
+
+<form id="bookingForm">
+
+<label>Rider / Booking Person Name *</label>
+<input id="name" required>
+
+<label>Mobile Number *</label>
+<input id="mobile" type="tel" required>
+
+<label>ID *</label>
+<input id="id" required>
+
+<label>Reference (optional)</label>
+<input id="reference">
+
+<label>Number of Persons *</label>
+<input id="persons" type="number" min="1" required>
+
+<label>Number of Booking Days *</label>
+<input id="days" type="number" min="1" required>
+
+<label>Type of Car Required *</label>
+<input id="car" required>
+
+<label>How did you hear about us?</label>
+<input id="source">
+
+<button type="submit">Send Booking Request on WhatsApp</button>
+
+</form>
+
+<p class="note">
+Booking terms including driving hours, driver food, waiting hours, night charges and extra driving should be confirmed before final booking.
+</p>
+</section>
+
+<section class="card">
+<h2>💳 Payment Information</h2>
+<p><strong>Payment schedule:</strong> 20% at booking, 60% at pickup and 20% before drop, according to the agreed trip terms.</p>
+<p>Payment can be made to the office account or UPI/scanner name <strong>Gurvinder pal singh</strong>.</p>
+</section>
+
+</div>
+
+<footer>
+© Maidh Taxi Service · 9467670607
+</footer>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+e.preventDefault();
+
+function get(id){
+return document.getElementById(id).value.trim();
+}
+
+let message =
+"Maidh Taxi Service Booking Request\n\n"+
+"Name: "+get("name")+"\n"+
+"Mobile: "+get("mobile")+"\n"+
+"ID: "+get("id")+"\n"+
+"Reference: "+(get("reference")||"None")+"\n"+
+"Persons: "+get("persons")+"\n"+
+"Booking days: "+get("days")+"\n"+
+"Car required: "+get("car")+"\n"+
+"How heard: "+(get("source")||"Not specified");
+
+window.open(
+"https://wa.me/919467670607?text="+encodeURIComponent(message),
+"_blank"
+);
+});
+</script>
+
+</body>
+</html>
