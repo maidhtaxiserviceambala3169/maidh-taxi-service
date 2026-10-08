@@ -586,7 +586,7 @@ function sendTaxiBooking() {
     "Booking Days: " + encodeURIComponent(document.getElementById("days").value) + "%0A" +
     "Reference: " + encodeURIComponent(document.getElementById("reference").value);
 
-  window.open("https://wa.me/919467670607?text=" + message, "_blank");
+  window.location.href = "https://wa.me/919467670607?text=" + message;
 }
 </script>
 </body>
