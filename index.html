@@ -515,8 +515,7 @@ let message =
 "How Heard: "+(get("source")||"Not specified")+"\n"+
 "Additional Requirement: "+(get("message")||"None");
 
-window.open(
-"https://wa.me/919467670607?text="+
+window.location.href = "https://wa.me/919467670607?text=" + message;
 encodeURIComponent(message),
 "_blank"
 );
