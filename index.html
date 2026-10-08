@@ -524,6 +524,71 @@ encodeURIComponent(message),
 });
 
 </script>
+<section id="book-taxi" style="padding:30px 15px;background:linear-gradient(135deg,#fff7e6,#e8f7ff);">
+  <div style="max-width:650px;margin:auto;background:#fff;padding:25px;border-radius:18px;box-shadow:0 5px 20px rgba(0,0,0,.12);">
+    <h2 style="text-align:center;color:#d97706;">🚕 Book Taxi Online</h2>
+    <p style="text-align:center;">Fill in your details and contact Maidh Taxi Service.</p>
 
+    <form onsubmit="sendTaxiBooking();return false;">
+
+      <input id="riderName" type="text" placeholder="👤 Rider Name" required
+      style="width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px;">
+
+      <input id="mobile" type="tel" placeholder="📱 Mobile Number" required
+      style="width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px;">
+
+      <input id="pickup" type="text" placeholder="📍 Pickup Location" required
+      style="width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px;">
+
+      <input id="drop" type="text" placeholder="📍 Drop Location" required
+      style="width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px;">
+
+      <input id="persons" type="number" min="1" placeholder="👥 Number of Persons" required
+      style="width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px;">
+
+      <input id="bookingDate" type="date" required
+      style="width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px;">
+
+      <select id="carType" required
+      style="width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px;">
+        <option value="">🚕 Select Car Type</option>
+        <option>Sedan</option>
+        <option>SUV</option>
+        <option>Luxury Car</option>
+        <option>Other</option>
+      </select>
+
+      <input id="days" type="number" min="1" value="1" placeholder="📅 Booking Days" required
+      style="width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px;">
+
+      <input id="reference" type="text" placeholder="🤝 Reference (Optional)"
+      style="width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px;">
+
+      <button type="submit"
+      style="width:100%;padding:15px;margin-top:15px;background:#25D366;color:white;border:0;border-radius:10px;font-size:18px;font-weight:bold;">
+        🚕 Book Now on WhatsApp
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<script>
+function sendTaxiBooking() {
+  var message =
+    "NEW TAXI BOOKING%0A%0A" +
+    "Rider Name: " + encodeURIComponent(document.getElementById("riderName").value) + "%0A" +
+    "Mobile: " + encodeURIComponent(document.getElementById("mobile").value) + "%0A" +
+    "Pickup: " + encodeURIComponent(document.getElementById("pickup").value) + "%0A" +
+    "Drop: " + encodeURIComponent(document.getElementById("drop").value) + "%0A" +
+    "Persons: " + encodeURIComponent(document.getElementById("persons").value) + "%0A" +
+    "Booking Date: " + encodeURIComponent(document.getElementById("bookingDate").value) + "%0A" +
+    "Car: " + encodeURIComponent(document.getElementById("carType").value) + "%0A" +
+    "Booking Days: " + encodeURIComponent(document.getElementById("days").value) + "%0A" +
+    "Reference: " + encodeURIComponent(document.getElementById("reference").value);
+
+  window.open("https://wa.me/919467670607?text=" + message, "_blank");
+}
+</script>
 </body>
 </html>
