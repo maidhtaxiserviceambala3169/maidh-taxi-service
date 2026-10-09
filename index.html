@@ -529,16 +529,18 @@ footer a { color: #a5f3fc; }
   </section>
 
   <section id="areas">
-    <h2>📍 Our Service Areas</h2>
-    <p>Contact us to check availability for your route.</p>
-    <div class="areas">
-      <span>Ambala</span>
-      <span>Delhi</span>
-      <span>Mohali</span>
-      <span>Chandigarh</span>
-      <span>Punjab</span>
-      <span>Haryana</span>
-    </div>
+    <h2>🇮🇳 Our Service Area — All Over India</h2>
+<p>Maidh Taxi Service welcomes bookings across India, subject to route and vehicle availability.</p>
+<div class="areas">
+  <span>Ambala</span>
+  <span>Delhi</span>
+  <span>Chandigarh</span>
+  <span>Mohali</span>
+  <span>Punjab</span>
+  <span>Haryana</span>
+  <span>All India</span>
+</div>
+<p>🚖 Local Travel • Airport Transfers • Outstation Trips • Long-Distance Journeys</p>
   </section>
 
   <section id="payments">
@@ -683,48 +685,59 @@ function sendEmailBooking() {
   const pickup = document.getElementById("pickup");
 
   if (!navigator.geolocation) {
-    status.textContent = "Location is not supported by this browser. Please enter your pickup address.";
+    status.textContent =
+      "Location is not supported. Please enter your pickup address manually.";
     return;
   }
 
-  status.textContent = "Requesting your location permission...";
+  status.textContent = "Requesting location permission...";
 
   navigator.geolocation.getCurrentPosition(
-    async function(position) {
+    async function (position) {
       const lat = position.coords.latitude;
       const lon = position.coords.longitude;
 
       pickup.value = lat + ", " + lon;
-      status.textContent = "Location captured. Finding the nearest address...";
+      status.textContent = "Location captured. Looking up address...";
 
       try {
         const url =
           "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=" +
-          encodeURIComponent(lat) + "&lon=" + encodeURIComponent(lon);
+          encodeURIComponent(lat) +
+          "&lon=" +
+          encodeURIComponent(lon);
 
         const response = await fetch(url);
-        if (!response.ok) throw new Error("Address lookup failed");
+        if (!response.ok) {
+          throw new Error("Address lookup failed");
+        }
 
         const data = await response.json();
 
         if (data.display_name) {
           pickup.value = data.display_name;
-          status.textContent = "Pickup address found. Please check it is correct.";
+          status.textContent =
+            "Pickup address found. Please check it is correct.";
         } else {
-          status.textContent = "Location captured as coordinates. Please verify the pickup point.";
+          status.textContent =
+            "Location captured. Please check the pickup address on Maps.";
         }
       } catch (error) {
         status.textContent =
-          "Location captured as coordinates. Please verify the pickup point on Maps.";
+          "Location captured, but the address lookup failed. Please check the pickup point on Maps.";
       }
     },
-    function(error) {
+    function (error) {
       status.textContent =
-        "Location permission was unavailable. Please type your pickup address manually.";
+        "Location permission unavailable. Please enter your pickup address manually.";
     },
-    { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 }
+    {
+      enableHighAccuracy: true,
+      timeout: 15000,
+      maximumAge: 0
+    }
   );
-}
+  }
 
 function openDropMap() {
   const drop = document.getElementById("drop");
