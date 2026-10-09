@@ -332,6 +332,10 @@ footer a { color: #a5f3fc; }
 </nav>
 
 <main>
+  <section style="text-align:center; background:#fff7df;">
+  <h2>🙏 Waheguru Ji, tuhada shukar hai</h2>
+  <p>With God's blessings, welcome to Maidh Taxi Service.</p>
+</section>
   <section id="home" class="hero">
     <h2>Your Journey, Our Responsibility</h2>
     <p>Book a taxi for local travel, airport transfers, official trips and outstation journeys.</p>
@@ -381,12 +385,26 @@ footer a { color: #a5f3fc; }
         <label for="pickup">Pickup Location *</label>
         <input id="pickup" name="pickup" type="text"
           placeholder="Pickup address or city" required>
-      </div>
+      </div>,<div class="field full">
+  <button type="button" class="button blue"
+    onclick="capturePickupLocation()">
+    📍 Use My Current Pickup Location
+  </button>
+  <p id="pickupStatus" role="status" aria-live="polite">
+    Allow location access when your phone asks.
+  </p>
+</div>
 
       <div class="field">
         <label for="drop">Drop Location *</label>
         <input id="drop" name="drop" type="text"
           placeholder="Destination address or city" required>
+      </div>,<div class="field full">
+  <button type="button" class="button blue"
+    onclick="openDropMap()">
+    🗺️ Search Drop Location on Google Maps
+  </button>
+  <p>Search in Maps, confirm your destination, then enter or paste its name or address into the Drop Location field.</p>
       </div>
 
       <div class="field">
@@ -461,6 +479,26 @@ footer a { color: #a5f3fc; }
           <option>Other</option>
         </select>
       </div>
+      
+      <div class="field">
+  <label for="idType">Customer ID Proof Type *</label>
+  <select id="idType" name="idType" required>
+    <option value="">Select ID proof type</option>
+    <option>Aadhaar Card</option>
+    <option>Driving Licence</option>
+    <option>Passport</option>
+    <option>Other Government ID</option>
+  </select>
+</div>
+
+<div class="field">
+  <label for="idMethod">ID Verification Method *</label>
+  <select id="idMethod" name="idMethod" required>
+    <option value="">Choose verification method</option>
+    <option>Verify with driver at pickup</option>
+    <option>Discuss verification with office</option>
+  </select>
+</div>
 
       <div class="field full">
         <label for="notes">Additional Requirements</label>
@@ -579,6 +617,8 @@ function getBookingMessage() {
     ["Booking Category", "category"],
     ["Reference / Discount", "reference"],
     ["How Customer Heard About Us", "heard"],
+    ["ID Proof Type", "idType"],
+["ID Verification Method", "idMethod"],
     ["Additional Requirements", "notes"]
   ];
 
@@ -637,6 +677,65 @@ function sendEmailBooking() {
     "Opening your email app. Please check the booking details and press Send.";
 
   window.location.href = url;
+}
+  async function capturePickupLocation() {
+  const status = document.getElementById("pickupStatus");
+  const pickup = document.getElementById("pickup");
+
+  if (!navigator.geolocation) {
+    status.textContent = "Location is not supported by this browser. Please enter your pickup address.";
+    return;
+  }
+
+  status.textContent = "Requesting your location permission...";
+
+  navigator.geolocation.getCurrentPosition(
+    async function(position) {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+
+      pickup.value = lat + ", " + lon;
+      status.textContent = "Location captured. Finding the nearest address...";
+
+      try {
+        const url =
+          "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=" +
+          encodeURIComponent(lat) + "&lon=" + encodeURIComponent(lon);
+
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Address lookup failed");
+
+        const data = await response.json();
+
+        if (data.display_name) {
+          pickup.value = data.display_name;
+          status.textContent = "Pickup address found. Please check it is correct.";
+        } else {
+          status.textContent = "Location captured as coordinates. Please verify the pickup point.";
+        }
+      } catch (error) {
+        status.textContent =
+          "Location captured as coordinates. Please verify the pickup point on Maps.";
+      }
+    },
+    function(error) {
+      status.textContent =
+        "Location permission was unavailable. Please type your pickup address manually.";
+    },
+    { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 }
+  );
+}
+
+function openDropMap() {
+  const drop = document.getElementById("drop");
+  const destination = drop.value.trim();
+
+  const mapURL = destination
+    ? "https://www.google.com/maps/search/?api=1&query=" +
+      encodeURIComponent(destination)
+    : "https://www.google.com/maps/";
+
+  window.open(mapURL, "_blank");
 }
 </script>
 
