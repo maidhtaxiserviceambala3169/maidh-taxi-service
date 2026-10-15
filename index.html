@@ -1,756 +1,729 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="google-site-verification" content="uRoaM_bAw8yTTsswlhWGQ42d6Tj4LWotsFkiiYJtLX4">
-
-<meta name="description" content="Book a taxi with Maidh Taxi Service for airport transfers, local travel and outstation journeys across Ambala, Delhi, Chandigarh, Mohali, Punjab and Haryana.">
-
-<meta name="theme-color" content="#102a43">
-
-<title>Maidh Taxi Service | Book Taxi Online</title>
-
-<style>
-
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-
-  margin: 0;
-
-  font-family: Arial, sans-serif;
-
-  background: #f1f6fc;
-
-  color: #243247;
-
-  line-height: 1.6;
-
-}
-
-header {
-
-  background: linear-gradient(135deg, #102a43, #075985, #087e8b);
-
-  color: white;
-
-  text-align: center;
-
-  padding: 30px 15px;
-
-}
-
-header .car { font-size: 48px; }
-
-header h1 { margin: 5px 0; font-size: 34px; }
-
-header p { margin: 8px 0 18px; }
-
-nav {
-
-  display: flex;
-
-  justify-content: center;
-
-  flex-wrap: wrap;
-
-  gap: 16px;
-
-  padding: 14px 8px;
-
-  background: white;
-
-}
-
-nav a {
-
-  color: #075985;
-
-  text-decoration: none;
-
-  font-weight: bold;
-
-}
-
-.button {
-
-  display: inline-block;
-
-  padding: 12px 17px;
-
-  margin: 4px;
-
-  border: 0;
-
-  border-radius: 9px;
-
-  text-decoration: none;
-
-  text-align: center;
-
-  font-size: 16px;
-
-  font-weight: bold;
-
-  cursor: pointer;
-
-  color: white;
-
-}
-
-.green { background: #168447; }
-
-.blue { background: #075985; }
-
-.orange { background: #e87916; }
-
-.dark { background: #102a43; }
-
-main {
-
-  max-width: 900px;
-
-  margin: auto;
-
-  padding: 14px;
-
-}
-
-section {
-
-  background: white;
-
-  margin: 18px 0;
-
-  padding: 22px 18px;
-
-  border-radius: 15px;
-
-  box-shadow: 0 4px 16px #102a4310;
-
-  scroll-margin-top: 12px;
-
-}
-
-h2 {
-
-  margin-top: 0;
-
-  color: #075985;
-
-}
-
-.hero {
-
-  text-align: center;
-
-  background: linear-gradient(135deg, #e0f2fe, #ecfeff, #fff7ed);
-
-  border-top: 5px solid #e87916;
-
-}
-
-.hero h2 { font-size: 29px; }
-
-.cards {
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-
-  gap: 14px;
-
-}
-
-.card {
-
-  background: #f0f8ff;
-
-  border-radius: 12px;
-
-  padding: 16px;
-
-  border-left: 4px solid #087e8b;
-
-}
-
-.card h3 { color: #075985; margin-top: 0; }
-
-form {
-
-  display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  gap: 14px;
-
-}
-
-.field { min-width: 0; }
-
-.full { grid-column: 1 / -1; }
-
-label {
-
-  display: block;
-
-  margin-bottom: 5px;
-
-  font-weight: bold;
-
-}
-
-input, select, textarea {
-
-  width: 100%;
-
-  min-width: 0;
-
-  padding: 12px;
-
-  border: 1px solid #bdcbd9;
-
-  border-radius: 8px;
-
-  background: white;
-
-  color: #243247;
-
-  font: inherit;
-
-  font-size: 16px;
-
-}
-
-textarea { min-height: 85px; resize: vertical; }
-
-.button-row {
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 10px;
-
-}
-
-.notice {
-
-  padding: 13px;
-
-  border-left: 4px solid #e87916;
-
-  background: #fff7ed;
-
-  border-radius: 7px;
-
-}
-
-.areas {
-
-  display: flex;
-
-  justify-content: center;
-
-  flex-wrap: wrap;
-
-  gap: 9px;
-
-}
-
-.areas span {
-
-  background: #dff7f7;
-
-  color: #075985;
-
-  padding: 8px 13px;
-
-  border-radius: 22px;
-
-  font-weight: bold;
-
-}
-
-.contact { text-align: center; }
-
-.phone { font-size: 21px; font-weight: bold; color: #075985; }
-
-footer {
-
-  background: #102a43;
-
-  color: white;
-
-  text-align: center;
-
-  padding: 25px 12px;
-
-}
-
-footer a { color: #a5f3fc; }
-
-@media (max-width: 560px) {
-
-  form { grid-template-columns: 1fr; }
-
-  .full { grid-column: auto; }
-
-  .button-row { grid-template-columns: 1fr; }
-
-  header h1 { font-size: 29px; }
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Maidh Taxi Service | Ambala & Airport Taxi Booking</title>
+
+  <meta name="description" content="Book Maidh Taxi Service for local rides, Ambala to Chandigarh Airport taxi, Delhi Airport transfers and outstation journeys across India. Call or WhatsApp 9467670607.">
+
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#082b55">
+
+  <!-- Keep Google Search Console verification -->
+  <meta name="google-site-verification" content="uRoaM_bAw8yTTsswlhWGQ42d6Tj4LWotsFkiiYJtLX4">
+
+  <link rel="canonical" href="https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/">
+
+  <style>
+    :root {
+      --navy: #082b55;
+      --blue: #087cf0;
+      --gold: #ffbd38;
+      --green: #16854b;
+      --light: #f3f7fc;
+      --ink: #172b43;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.65;
+    }
+
+    a { text-decoration: none; }
+
+    .topbar {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 9px 12px;
+      font-size: 14px;
+    }
+
+    header {
+      background: white;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 12px #0000000c;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 21px;
+    }
+
+    .brand span { color: var(--blue); }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    nav a { color: var(--navy); font-weight: bold; }
+
+    .hero {
+      background: linear-gradient(130deg, #082b55, #087cf0);
+      color: white;
+      padding: 65px 6% 58px;
+      text-align: center;
+    }
+
+    .hero .tag {
+      color: #ffe09a;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      line-height: 1.15;
+      margin: 15px auto;
+      max-width: 850px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 16px auto 25px;
+      font-size: 17px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 22px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      border: 0;
+      border-radius: 10px;
+      padding: 13px 20px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-gold { background: var(--gold); color: #172b43; }
+    .btn-white { background: white; color: var(--navy); }
+    .btn-green { background: var(--green); color: white; }
+    .btn-blue { background: var(--blue); color: white; }
+
+    .trust {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .trust span {
+      border: 1px solid #ffffff66;
+      padding: 7px 12px;
+      border-radius: 30px;
+      font-size: 13px;
+    }
+
+    section { padding: 48px 6%; }
+
+    .section-title {
+      text-align: center;
+      color: var(--navy);
+      font-size: clamp(26px, 4vw, 36px);
+      margin: 0 0 8px;
+      line-height: 1.25;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 28px;
+      color: #566579;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .service-card {
+      border: 1px solid #e4eaf2;
+      border-radius: 16px;
+      padding: 24px;
+      background: white;
+      box-shadow: 0 5px 20px #082b550b;
+    }
+
+    .service-card .emoji { font-size: 36px; }
+
+    .service-card h3 {
+      color: var(--navy);
+      margin: 8px 0;
+      font-size: 20px;
+    }
+
+    .service-card p { color: #566579; font-size: 15px; }
+
+    .service-card a { font-weight: bold; color: var(--blue); }
+
+    .pale { background: var(--light); }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .step {
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .step b {
+      display: inline-grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      background: #dcecff;
+      color: var(--navy);
+      border-radius: 50%;
+      margin-bottom: 8px;
+    }
+
+    .booking-wrap {
+      max-width: 780px;
+      margin: auto;
+      background: white;
+      border-radius: 18px;
+      padding: clamp(18px, 4vw, 34px);
+      box-shadow: 0 8px 30px #082b5512;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .field { display: flex; flex-direction: column; gap: 5px; }
+    .field.full { grid-column: 1 / -1; }
+
+    label { font-size: 14px; font-weight: bold; }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font: inherit;
+      background: white;
+      color: var(--ink);
+    }
+
+    textarea { min-height: 85px; resize: vertical; }
+
+    .hint { color: #637287; font-size: 12px; }
+
+    .field-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
+
+    .field-buttons .btn { padding: 9px 12px; font-size: 13px; }
+
+    .booking-note {
+      background: #fff6df;
+      padding: 12px;
+      border-radius: 9px;
+      font-size: 13px;
+      margin: 18px 0;
+    }
+
+    .form-submit { width: 100%; }
+
+    .contact-box {
+      background: var(--navy);
+      color: white;
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .contact-box h2 { color: white; }
+
+    footer {
+      background: #061d38;
+      color: #e6edf7;
+      padding: 30px 6%;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a { color: #ffda83; }
+
+    .sticky-book {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 9px;
+      box-shadow: 0 -3px 15px #0002;
+      gap: 8px;
+    }
+
+    .sticky-book a { flex: 1; }
+
+    @media (max-width: 600px) {
+      header { justify-content: center; }
+      nav { justify-content: center; gap: 12px; }
+      .hero { padding: 45px 5%; }
+      section { padding: 38px 5%; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .sticky-book { display: flex; }
+      footer { padding-bottom: 85px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "Maidh Taxi Service",
+    "url": "https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/",
+    "telephone": "+919467670607",
+    "email": "maidhtaxiserviceambala@gmail.com",
+    "areaServed": [
+      {"@type":"City","name":"Ambala"},
+      {"@type":"City","name":"Chandigarh"},
+      {"@type":"City","name":"Delhi"},
+      {"@type":"AdministrativeArea","name":"Haryana"},
+      {"@type":"AdministrativeArea","name":"Punjab"}
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <header>
-  <div class="car">🚖</div>
-  <h1>Maidh Taxi Service</h1>
-  <p>Your trusted travel partner for comfortable journeys.</p>
-  <a class="button orange" href="#booking">📅 Book Taxi Online</a>
-  <a class="button green" href="tel:+919467670607">📞 Call Us</a>
-</header>
-
-<nav>
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#booking">Book Taxi</a>
-  <a href="#areas">Service Areas</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<main>
-  <section style="text-align:center; background:#fff7df;">
-  <h2>🙏 Waheguru Ji, tuhada shukar hai</h2>
-  <p>With God's blessings, welcome to Maidh Taxi Service.</p>
-</section>
-  <section id="home" class="hero">
-    <h2>Your Journey, Our Responsibility</h2>
-    <p>Book a taxi for local travel, airport transfers, official trips and outstation journeys.</p>
-    <a class="button blue" href="#booking">Start Your Booking</a>
-  </section>
-
-  <section id="services">
-    <h2>🚘 Our Taxi Services</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>✈️ Airport Transfers</h3>
-        <p>Arrange airport pickup and drop-off for your journey.</p>
-      </div>
-      <div class="card">
-        <h3>💼 Official Travel</h3>
-        <p>Request transport for office visits and business trips.</p>
-      </div>
-      <div class="card">
-        <h3>🚖 Comfortable Rides</h3>
-        <p>Tell us your preferred car type and passenger count.</p>
-      </div>
-      <div class="card">
-        <h3>🛣️ Outstation Trips</h3>
-        <p>Contact us about intercity and longer journeys.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="booking">
-    <h2>📅 Book Taxi Online</h2>
-    <p>Complete the form. Choose WhatsApp or email to prepare your booking request.</p>
-
-    <form id="taxiBookingForm">
-      <div class="field">
-        <label for="riderName">Passenger / Booking Name *</label>
-        <input id="riderName" name="riderName" type="text" required>
-      </div>
-
-      <div class="field">
-        <label for="mobile">Mobile Number *</label>
-        <input id="mobile" name="mobile" type="tel"
-          inputmode="tel" autocomplete="tel"
-          pattern="[0-9+() -]{7,20}" required>
-      </div>
-
-      <div class="field">
-        <label for="pickup">Pickup Location *</label>
-        <input id="pickup" name="pickup" type="text"
-          placeholder="Pickup address or city" required>
-      </div>,<div class="field full">
-  <button type="button" class="button blue"
-    onclick="capturePickupLocation()">
-    📍 Use My Current Pickup Location
-  </button>
-  <p id="pickupStatus" role="status" aria-live="polite">
-    Allow location access when your phone asks.
-  </p>
-</div>
-
-      <div class="field">
-        <label for="drop">Drop Location *</label>
-        <input id="drop" name="drop" type="text"
-          placeholder="Destination address or city" required>
-      </div>,<div class="field full">
-  <button type="button" class="button blue"
-    onclick="openDropMap()">
-    🗺️ Search Drop Location on Google Maps
-  </button>
-  <p>Search in Maps, confirm your destination, then enter or paste its name or address into the Drop Location field.</p>
-      </div>
-
-      <div class="field">
-        <label for="bookingDate">Travel Date *</label>
-        <input id="bookingDate" name="bookingDate" type="date" required>
-      </div>
-
-      <div class="field">
-        <label for="bookingTime">Pickup Time</label>
-        <input id="bookingTime" name="bookingTime" type="time">
-      </div>
-
-      <div class="field">
-        <label for="persons">Number of Passengers *</label>
-        <select id="persons" name="persons" required>
-          <option value="">Select passengers</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8 or more</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="days">Booking Days *</label>
-        <input id="days" name="days" type="number"
-          min="1" max="365" value="1" required>
-      </div>
-
-      <div class="field">
-        <label for="carType">Preferred Car Type *</label>
-        <select id="carType" name="carType" required>
-          <option value="">Select car type</option>
-          <option>Hatchback</option>
-          <option>Sedan</option>
-          <option>SUV</option>
-          <option>Luxury Car</option>
-          <option>Need advice on car type</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="category">Booking Category *</label>
-        <select id="category" name="category" required>
-          <option value="">Select category</option>
-          <option>Airport Service</option>
-          <option>Official Booking</option>
-          <option>Luxury Booking</option>
-          <option>Local Travel</option>
-          <option>Outstation Travel</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="reference">Reference / Discount Code</label>
-        <input id="reference" name="reference" type="text"
-          placeholder="Optional">
-      </div>
-
-      <div class="field">
-        <label for="heard">How Did You Hear About Us?</label>
-        <select id="heard" name="heard">
-          <option value="">Choose an option</option>
-          <option>Google Search</option>
-          <option>Google Maps / Business Profile</option>
-          <option>Friend or Family</option>
-          <option>Previous Customer</option>
-          <option>Other</option>
-        </select>
-      </div>
-      
-      <div class="field">
-  <label for="idType">Customer ID Proof Type *</label>
-  <select id="idType" name="idType" required>
-    <option value="">Select ID proof type</option>
-    <option>Aadhaar Card</option>
-    <option>Driving Licence</option>
-    <option>Passport</option>
-    <option>Other Government ID</option>
-  </select>
-</div>
-
-<div class="field">
-  <label for="idMethod">ID Verification Method *</label>
-  <select id="idMethod" name="idMethod" required>
-    <option value="">Choose verification method</option>
-    <option>Verify with driver at pickup</option>
-    <option>Discuss verification with office</option>
-  </select>
-</div>
-
-      <div class="field full">
-        <label for="notes">Additional Requirements</label>
-        <textarea id="notes" name="notes"
-          placeholder="Optional: return journey, luggage, stops or other requirements"></textarea>
-      </div>
-
-      <div class="field full notice">
-        <strong>Before booking:</strong> Confirm the fare, driving hours,
-        waiting time, driver food, night charges and extra-distance charges
-        with the service provider.
-      </div>
-
-      <div class="field full button-row">
-        <button class="button green" type="button"
-          onclick="sendTaxiBooking()">📲 Send Booking on WhatsApp</button>
-
-        <button class="button blue" type="button"
-          onclick="sendEmailBooking()">✉️ Send Booking by Email</button>
-      </div>
-
-      <div class="field full">
-        <p id="formMessage" role="status" aria-live="polite"></p>
-        <small>Sending a request does not confirm your booking.
-        After WhatsApp or email opens, press Send in that app.</small>
-      </div>
-    </form>
-  </section>
-
-  <section id="areas">
-    <h2>🇮🇳 Our Service Area — All Over India</h2>
-<p>Maidh Taxi Service welcomes bookings across India, subject to route and vehicle availability.</p>
-<div class="areas">
-  <span>Ambala</span>
-  <span>Delhi</span>
-  <span>Chandigarh</span>
-  <span>Mohali</span>
-  <span>Punjab</span>
-  <span>Haryana</span>
-  <span>All India</span>
-</div>
-<p>🚖 Local Travel • Airport Transfers • Outstation Trips • Long-Distance Journeys</p>
-  </section>
-
-  <section id="payments">
-    <h2>💳 Payment Information</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>20% — Booking</h3>
-        <p>At booking time, according to the agreed trip terms.</p>
-      </div>
-      <div class="card">
-        <h3>60% — Pickup</h3>
-        <p>At pickup time, as agreed with the provider.</p>
-      </div>
-      <div class="card">
-        <h3>20% — Before Drop</h3>
-        <p>Before drop-off, as agreed when the trip is confirmed.</p>
-      </div>
-    </div>
-    <p class="notice">Confirm the fare, payment schedule and accepted
-      payment method before making any payment. Verify payment details
-      directly with the service provider.</p>
-  </section>
-</main>
-<section id="contact">
-  <h2>📞 Contact Maidh Taxi Service</h2>
-
-  <div class="contact">
-    <p>Main booking number</p>
-    <p class="phone">9467670607</p>
-
-    <a class="button green" href="tel:+919467670607">📞 Call Us</a>
-    <a class="button green"
-       href="https://wa.me/919467670607"
-       target="_blank" rel="noopener noreferrer">💬 Open WhatsApp</a>
-
-    <hr>
-
-    <p>Backup / Emergency Contact</p>
-    <p class="phone">9671006004</p>
-    <a class="button dark" href="tel:+919671006004">Call Backup Number</a>
-
-    <hr>
-
-    <p>Email</p>
-    <p>
-      <a href="mailto:maidhtaxiserviceambala@gmail.com">
-        maidhtaxiserviceambala@gmail.com
-      </a>
-    </p>
-
-    <p><strong>Payment display name:</strong> Gurvinder pal singh</p>
+  <div class="topbar">
+    🚕 Local • Airport • Outstation Taxi Enquiries | Call 9467670607
   </div>
-</section>
 
-<footer>
-  <h3>🚖 Maidh Taxi Service</h3>
-  <p>Thank you for choosing us. Have a safe and comfortable journey!</p>
-  <p>© <span id="currentYear"></span> Maidh Taxi Service</p>
-</footer>
+  <header>
+    <a class="brand" href="#home">🚕 Maidh <span>Taxi Service</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#airports">Airport Taxi</a>
+      <a href="#booking">Book Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<script>
-document.getElementById("currentYear").textContent =
-  new Date().getFullYear();
+  <main>
+    <div class="hero" id="home">
+      <div class="tag">YOUR JOURNEY, OUR COMMITMENT</div>
+      <h1>Book Your Taxi from Ambala to Airports & Across India</h1>
+      <p>
+        Planning a local ride, an airport transfer or an outstation trip?
+        Contact Maidh Taxi Service to discuss your route, travel date,
+        preferred car and fare.
+      </p>
 
-function getBookingMessage() {
-  const fields = [
-    ["Passenger Name", "riderName"],
-    ["Customer Mobile", "mobile"],
-    ["Pickup Location", "pickup"],
-    ["Drop Location", "drop"],
-    ["Travel Date", "bookingDate"],
-    ["Pickup Time", "bookingTime"],
-    ["Number of Passengers", "persons"],
-    ["Booking Days", "days"],
-    ["Preferred Car", "carType"],
-    ["Booking Category", "category"],
-    ["Reference / Discount", "reference"],
-    ["How Customer Heard About Us", "heard"],
-    ["ID Proof Type", "idType"],
-["ID Verification Method", "idMethod"],
-    ["Additional Requirements", "notes"]
-  ];
+      <div class="actions">
+        <a class="btn btn-gold" href="#booking">🚕 BOOK YOUR TAXI</a>
+        <a class="btn btn-white" href="tel:+919467670607">📞 CALL NOW</a>
+        <a class="btn btn-green"
+           href="https://wa.me/919467670607?text=Hello%20Maidh%20Taxi%20Service%2C%20I%20want%20to%20enquire%20about%20a%20taxi%20booking."
+           target="_blank" rel="noopener">💬 WHATSAPP</a>
+      </div>
 
-  let message = "NEW TAXI BOOKING REQUEST\n";
-  message += "Maidh Taxi Service\n\n";
+      <div class="trust">
+        <span>✈️ Airport Transfers</span>
+        <span>📍 Planned Pickups</span>
+        <span>🚘 Local & Outstation</span>
+        <span>📲 Easy Booking Enquiries</span>
+      </div>
+    </div>
 
-  fields.forEach(function(field) {
-    const element = document.getElementById(field[1]);
-    const value = element.value.trim();
+    <section id="services">
+      <h2 class="section-title">Taxi Services for Your Journey</h2>
+      <p class="section-intro">
+        Tell us where you want to go. We will discuss your travel
+        requirements, car availability and fare before confirming.
+      </p>
 
-    if (value !== "") {
-      message += field[0] + ": " + value + "\n";
-    }
-  });
+      <div class="services">
+        <article class="service-card">
+          <div class="emoji">🚕</div>
+          <h3>Taxi Service in Ambala</h3>
+          <p>Enquire about local rides, planned journeys and travel
+          from Ambala to your chosen destination.</p>
+          <a href="#booking">Enquire now →</a>
+        </article>
 
-  message += "\nPlease confirm availability and the final fare.";
-  return message;
-}
+        <article class="service-card" id="airports">
+          <div class="emoji">✈️</div>
+          <h3>Ambala to Chandigarh Airport</h3>
+          <p>Request an airport transfer. Share your flight time,
+          pickup point, luggage needs and destination.</p>
+          <a href="#booking">Plan airport travel →</a>
+        </article>
 
-function validateBookingForm() {
-  const form = document.getElementById("taxiBookingForm");
-  return form.reportValidity();
-}
+        <article class="service-card">
+          <div class="emoji">🛫</div>
+          <h3>Ambala to Delhi Airport</h3>
+          <p>Enquire about Delhi Airport pickup or drop. Confirm
+          your travel schedule and fare before the trip.</p>
+          <a href="#booking">Request a taxi →</a>
+        </article>
 
-function sendTaxiBooking() {
-  if (!validateBookingForm()) {
-    return;
-  }
+        <article class="service-card">
+          <div class="emoji">🧳</div>
+          <h3>Airport Pickup & Drop</h3>
+          <p>Arrange your planned journey to or from Chandigarh
+          Airport or Delhi Airport, subject to availability.</p>
+          <a href="#booking">Send trip details →</a>
+        </article>
 
-  const message = getBookingMessage();
-  const url =
-    "https://wa.me/919467670607?text=" +
-    encodeURIComponent(message);
+        <article class="service-card">
+          <div class="emoji">🌍</div>
+          <h3>Outstation Travel Across India</h3>
+          <p>Planning a longer journey? Share your destination,
+          travel dates and number of passengers for a quote.</p>
+          <a href="#booking">Plan your journey →</a>
+        </article>
+      </div>
+    </section>
 
-  document.getElementById("formMessage").textContent =
-    "Opening WhatsApp. Please check the booking details and press Send.";
+    <section class="pale">
+      <h2 class="section-title">Why Contact Maidh Taxi Service?</h2>
+      <p class="section-intro">
+        Clear communication helps you plan your journey with confidence.
+      </p>
+      <div class="services">
+        <article class="service-card">
+          <div class="emoji">📲</div>
+          <h3>Easy Enquiries</h3>
+          <p>Send your travel requirements through our online form
+          or contact us directly.</p>
+        </article>
+        <article class="service-card">
+          <div class="emoji">🗺️</div>
+          <h3>Route Planning</h3>
+          <p>Share your pickup and destination so your route
+          and trip requirements can be discussed.</p>
+        </article>
+        <article class="service-card">
+          <div class="emoji">💬</div>
+          <h3>Fare Confirmation</h3>
+          <p>Discuss the fare, vehicle availability and any
+          additional charges before confirming your trip.</p>
+        </article>
+      </div>
+    </section>
 
-  window.open(url, "_blank");
-}
+    <section>
+      <h2 class="section-title">How to Book Your Taxi</h2>
+      <p class="section-intro">Three simple steps to send a booking enquiry.</p>
+      <div class="steps">
+        <div class="step">
+          <b>1</b>
+          <h3>Share Your Details</h3>
+          <p>Enter your name, contact number, pickup, destination
+          and travel date.</p>
+        </div>
+        <div class="step">
+          <b>2</b>
+          <h3>Send on WhatsApp</h3>
+          <p>Your enquiry opens in WhatsApp so you can review
+          and send the trip details.</p>
+        </div>
+        <div class="step">
+          <b>3</b>
+          <h3>Confirm Your Ride</h3>
+          <p>Wait for us to confirm availability, fare and
+          booking arrangements.</p>
+        </div>
+      </div>
+    </section>
 
-function sendEmailBooking() {
-  if (!validateBookingForm()) {
-    return;
-  }
+    <section class="pale" id="booking">
+      <h2 class="section-title">Book Your Taxi Online</h2>
+      <p class="section-intro">
+        Complete the form to prepare your booking enquiry.
+        Required fields are marked with *.
+      </p>
 
-  const message = getBookingMessage();
-  const subject = "New Taxi Booking - Maidh Taxi Service";
+      <div class="booking-wrap">
+        <form id="bookingForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="customerName">Your name *</label>
+              <input id="customerName" name="customerName"
+                     autocomplete="name" required>
+            </div>
 
-  const url =
-    "mailto:maidhtaxiserviceambala@gmail.com?subject=" +
-    encodeURIComponent(subject) +
-    "&body=" +
-    encodeURIComponent(message);
+            <div class="field">
+              <label for="customerPhone">Your mobile number *</label>
+              <input id="customerPhone" name="customerPhone"
+                     type="tel" inputmode="tel" autocomplete="tel"
+                     required>
+            </div>
 
-  document.getElementById("formMessage").textContent =
-    "Opening your email app. Please check the booking details and press Send.";
+            <div class="field">
+              <label for="pickup">Pickup location *</label>
+              <input id="pickup" name="pickup"
+                     placeholder="Enter pickup location" required>
+              <div class="field-buttons">
+                <button type="button" class="btn btn-blue"
+                        onclick="capturePickupLocation()">
+                  📍 Use Current Location
+                </button>
+              </div>
+              <span class="hint">Location is requested only when you tap the button.</span>
+            </div>
 
-  window.location.href = url;
-}
-  async function capturePickupLocation() {
-  const status = document.getElementById("pickupStatus");
-  const pickup = document.getElementById("pickup");
+            <div class="field">
+              <label for="destination">Destination *</label>
+              <input id="destination" name="destination"
+                     placeholder="Airport, city or address" required>
+              <div class="field-buttons">
+                <button type="button" class="btn btn-blue"
+                        onclick="openDestinationMap()">
+                  🗺️ Find on Google Maps
+                </button>
+              </div>
+            </div>
 
-  if (!navigator.geolocation) {
-    status.textContent =
-      "Location is not supported. Please enter your pickup address manually.";
-    return;
-  }
+            <div class="field">
+              <label for="travelDate">Travel date *</label>
+              <input id="travelDate" name="travelDate"
+                     type="date" required>
+            </div>
 
-  status.textContent = "Requesting location permission...";
+            <div class="field">
+              <label for="travelTime">Pickup time</label>
+              <input id="travelTime" name="travelTime" type="time">
+            </div>
 
-  navigator.geolocation.getCurrentPosition(
-    async function (position) {
-      const lat = position.coords.latitude;
-      const lon = position.coords.longitude;
+            <div class="field">
+              <label for="passengers">Number of passengers *</label>
+              <select id="passengers" name="passengers" required>
+                <option value="">Select passengers</option>
+                <option>1</option><option>2</option><option>3</option>
+                <option>4</option><option>5</option><option>6</option>
+                <option>7</option><option>8 or more</option>
+              </select>
+            </div>
 
-      pickup.value = lat + ", " + lon;
-      status.textContent = "Location captured. Looking up address...";
+            <div class="field">
+              <label for="days">Number of travel days</label>
+              <input id="days" name="days" type="number"
+                     min="1" max="365" value="1">
+            </div>
 
-      try {
-        const url =
-          "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=" +
-          encodeURIComponent(lat) +
-          "&lon=" +
-          encodeURIComponent(lon);
+            <div class="field">
+              <label for="carType">Preferred car</label>
+              <select id="carType" name="carType">
+                <option value="Please advise">Please advise</option>
+                <option>Sedan</option>
+                <option>SUV</option>
+                <option>Luxury car</option>
+                <option>Family / larger vehicle</option>
+              </select>
+            </div>
 
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error("Address lookup failed");
-        }
+            <div class="field">
+              <label for="serviceType">Type of service</label>
+              <select id="serviceType" name="serviceType">
+                <option>Airport transfer</option>
+                <option>Local taxi</option>
+                <option>Outstation trip</option>
+                <option>Official / business travel</option>
+                <option>Luxury travel enquiry</option>
+              </select>
+            </div>
 
-        const data = await response.json();
+            <div class="field">
+              <label for="reference">Reference or discount code</label>
+              <input id="reference" name="reference"
+                     placeholder="Optional">
+            </div>
 
-        if (data.display_name) {
-          pickup.value = data.display_name;
-          status.textContent =
-            "Pickup address found. Please check it is correct.";
-        } else {
-          status.textContent =
-            "Location captured. Please check the pickup address on Maps.";
-        }
-      } catch (error) {
-        status.textContent =
-          "Location captured, but the address lookup failed. Please check the pickup point on Maps.";
+            <div class="field">
+              <label for="heardFrom">How did you find us?</label>
+              <select id="heardFrom" name="heardFrom">
+                <option>Google Search</option>
+                <option>Google Maps</option>
+                <option>Friend or family</option>
+                <option>Repeat customer</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="notes">Additional requirements</label>
+              <textarea id="notes" name="notes"
+                        placeholder="Return journey, flight details, luggage or other requirements"></textarea>
+            </div>
+          </div>
+
+          <div class="booking-note">
+            <strong>Before confirming:</strong> We will discuss
+            availability, total fare, waiting time, night charges
+            and any applicable extra charges. No booking is confirmed
+            until the details are agreed with you.
+            Please do not enter ID numbers or other sensitive
+            identity information in this form.
+          </div>
+
+          <button type="submit" class="btn btn-green form-submit">
+            💬 SEND BOOKING ENQUIRY ON WHATSAPP
+          </button>
+
+          <p class="hint">
+            WhatsApp will open with your enquiry prepared.
+            Please press Send in WhatsApp to submit it.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-box">
+        <h2>Ready to Plan Your Journey?</h2>
+        <p>Contact Maidh Taxi Service to enquire about your next ride.</p>
+        <p><strong>Call / WhatsApp: 9467670607</strong></p>
+        <p>Backup contact: <a href="tel:+919671006004">9671006004</a></p>
+        <p>Email: <a href="mailto:maidhtaxiserviceambala@gmail.com">
+          maidhtaxiserviceambala@gmail.com</a></p>
+        <div class="actions">
+          <a class="btn btn-gold" href="tel:+919467670607">📞 Call Now</a>
+          <a class="btn btn-green"
+             href="https://wa.me/919467670607"
+             target="_blank" rel="noopener">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Maidh Taxi Service</strong></p>
+    <p>Ambala • Chandigarh Airport • Delhi Airport • Outstation Travel</p>
+    <p>
+      <a href="#home">Home</a> ·
+      <a href="#services">Services</a> ·
+      <a href="#booking">Book Taxi</a> ·
+      <a href="#contact">Contact</a>
+    </p>
+    <p>© <span id="year"></span> Maidh Taxi Service. All rights reserved.</p>
+  </footer>
+
+  <div class="sticky-book">
+    <a class="btn btn-green" href="https://wa.me/919467670607"
+       target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn btn-gold" href="#booking">Book Taxi</a>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Do not allow selecting a past travel date.
+    const dateInput = document.getElementById("travelDate");
+    const today = new Date();
+    const localToday = [
+      today.getFullYear(),
+      String(today.getMonth() + 1).padStart(2, "0"),
+      String(today.getDate()).padStart(2, "0")
+    ].join("-");
+    dateInput.min = localToday;
+
+    function capturePickupLocation() {
+      const pickup = document.getElementById("pickup");
+
+      if (!navigator.geolocation) {
+        alert("Location is not supported by this browser. Please type your pickup location.");
+        return;
       }
-    },
-    function (error) {
-      status.textContent =
-        "Location permission unavailable. Please enter your pickup address manually.";
-    },
-    {
-      enableHighAccuracy: true,
-      timeout: 15000,
-      maximumAge: 0
+
+      pickup.placeholder = "Requesting location permission...";
+
+      navigator.geolocation.getCurrentPosition(
+        function(position) {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          pickup.value = lat.toFixed(6) + ", " + lon.toFixed(6);
+          pickup.placeholder = "Current location captured";
+        },
+        function() {
+          pickup.placeholder = "Enter pickup location";
+          alert("Could not get your location. Allow location access or type your pickup address.");
+        },
+        { enableHighAccuracy: true, timeout: 12000 }
+      );
     }
-  );
-  }
 
-function openDropMap() {
-  const drop = document.getElementById("drop");
-  const destination = drop.value.trim();
+    function openDestinationMap() {
+      const destination =
+        document.getElementById("destination").value.trim();
 
-  const mapURL = destination
-    ? "https://www.google.com/maps/search/?api=1&query=" +
-      encodeURIComponent(destination)
-    : "https://www.google.com/maps/";
+      const query = destination || "Airport or destination";
+      const url = "https://www.google.com/maps/search/?api=1&query="
+        + encodeURIComponent(query);
 
-  window.open(mapURL, "_blank");
-}
-</script>
+      window.open(url, "_blank", "noopener");
+    }
 
-</body>
-</html>
+    document.getElementById("bookingForm").addEventListener(
+      "submit",
+      function(event) {
+        event.preventDefault();
+
+        const get = id =>
+          document.getElementById(id).value.trim();
+
+        const message = [
+          "NEW TAXI BOOKING ENQUIRY",
+          "",
+          "Business: Maidh Taxi Service",
+          "Customer name: " + get("customerName"),
+          "Customer mobile: " + get("customerPhone"),
+          "Pickup: " + get("pickup"),
+          "Destination: " + get("destination"),
+          "Travel date: " + get("travelDate"),
+          "Pickup time: " + (get("travelTime") || "Not specified"),
+          "Passengers: " + get("passengers"),
+          "Travel days: " + (get("days") || "Not specified"),
+          "Preferred car:
