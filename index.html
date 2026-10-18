@@ -1,458 +1,279 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-IN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#1769d2">
-<meta name="description" content="Maidh Taxi Service, Ambala City, Haryana. Book comfortable taxis for family trips, airport transfers and outstation travel. Call or WhatsApp us today.">
-<title>Maidh Taxi Service | Ambala City</title>
-
-<style>
-:root {
-  --blue:#1769d2;
-  --deep:#123b75;
-  --turquoise:#12b8a6;
-  --gold:#ffc83d;
-  --ink:#183153;
-  --muted:#63738a;
-  --white:#fff;
-  --light:#f2f8ff;
-}
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body {
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--ink);
-  background:#fff;
-  line-height:1.6;
-}
-a { text-decoration:none; }
-button,input,select,textarea { font:inherit; }
-button,a { -webkit-tap-highlight-color:transparent; }
-.container { width:min(1120px,92%); margin:auto; }
-header {
-  position:sticky; top:0; z-index:10;
-  background:rgba(255,255,255,.96);
-  backdrop-filter:blur(12px);
-  box-shadow:0 3px 18px #123b7510;
-}
-.nav {
-  display:flex; justify-content:space-between; align-items:center;
-  gap:12px; padding:12px 0;
-}
-.brand { display:flex; align-items:center; gap:10px; }
-.logo {
-  width:48px; height:48px; border-radius:16px;
-  display:grid; place-items:center; font-size:27px;
-  background:linear-gradient(135deg,var(--blue),var(--turquoise));
-  box-shadow:0 7px 18px #1769d235;
-}
-.brand strong { display:block; color:var(--deep); font-size:17px; line-height:1.2; }
-.brand small { color:var(--muted); font-size:12px; }
-.nav-links { display:flex; align-items:center; gap:18px; }
-.nav-links a { color:var(--ink); font-weight:700; font-size:14px; }
-.btn {
-  display:inline-flex; align-items:center; justify-content:center;
-  gap:8px; padding:13px 19px; border:0; border-radius:14px;
-  font-weight:800; cursor:pointer; transition:transform .2s,box-shadow .2s;
-}
-.btn:hover { transform:translateY(-2px); box-shadow:0 9px 22px #123b7522; }
-.btn-blue { color:white; background:linear-gradient(135deg,var(--blue),#398cf0); }
-.btn-gold { color:#26354a; background:linear-gradient(135deg,#ffdb67,var(--gold)); }
-.btn-green { color:white; background:linear-gradient(135deg,#079e83,var(--turquoise)); }
-.btn-white { color:var(--deep); background:white; }
-.hero {
-  overflow:hidden; position:relative;
-  background:
-    radial-gradient(ellipse at 90% 5%,#ffe28d88,transparent 34%),
-    radial-gradient(ellipse at 5% 90%,#75e6d755,transparent 34%),
-    linear-gradient(135deg,#f4f9ff,#fff 60%,#f0fffb);
-  padding:58px 0 48px;
-}
-.hero-grid { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:30px; }
-.eyebrow {
-  display:inline-block; padding:7px 12px; border-radius:50px;
-  color:var(--deep); background:#e2f2ff; font-size:13px; font-weight:800;
-}
-h1 { font-size:clamp(36px,5.4vw,60px); line-height:1.08; margin:18px 0; letter-spacing:-1.8px; }
-.gradient-text {
-  background:linear-gradient(90deg,var(--blue),var(--turquoise));
-  -webkit-background-clip:text; background-clip:text; color:transparent;
-}
-.hero p { font-size:17px; color:var(--muted); max-width:510px; }
-.actions { display:flex; flex-wrap:wrap; gap:12px; margin:24px 0; }
-.hero-note { font-size:13px!important; }
-.car-stage {
-  position:relative; padding:16px; border-radius:32px;
-  background:linear-gradient(145deg,#ffffff,#e5f4ff);
-  box-shadow:0 24px 55px #1769d225, inset 0 1px 0 white;
-  transform:perspective(1000px) rotateY(-3deg);
-}
-.car-stage img {
-  display:block; width:100%; aspect-ratio:4/3; object-fit:cover;
-  border-radius:23px; box-shadow:0 12px 28px #123b7522;
-}
-.float-card {
-  position:absolute; padding:11px 15px; border-radius:16px;
-  background:white; box-shadow:0 12px 30px #123b7520;
-  font-weight:800; font-size:13px;
-}
-.float-one { left:-12px; top:28px; }
-.float-two { right:-10px; bottom:28px; background:#fff6d9; }
-.section { padding:62px 0; }
-.section-tint { background:var(--light); }
-.section-title { text-align:center; margin-bottom:32px; }
-.section-title h2 { margin:0 0 8px; font-size:clamp(27px,4vw,38px); color:var(--deep); }
-.section-title p { margin:0; color:var(--muted); }
-.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-.card {
-  padding:23px; background:white; border-radius:23px;
-  border:1px solid #e5edf7; box-shadow:0 10px 30px #123b750b;
-  transition:transform .2s,box-shadow .2s;
-}
-.card:hover { transform:translateY(-4px); box-shadow:0 16px 35px #123b7517; }
-.card-icon {
-  width:56px; height:56px; display:grid; place-items:center;
-  border-radius:18px; font-size:27px; margin-bottom:12px;
-  background:#e6f2ff;
-}
-.card:nth-child(2) .card-icon { background:#ddfbf4; }
-.card:nth-child(3) .card-icon { background:#fff3cb; }
-.card h3 { margin:5px 0; color:var(--deep); }
-.card p { color:var(--muted); margin:0; font-size:14px; }
-.booking-grid { display:grid; grid-template-columns:1fr 1fr; gap:25px; align-items:start; }
-.panel {
-  background:white; border-radius:24px; padding:25px;
-  border:1px solid #e3edf7; box-shadow:0 12px 35px #123b750d;
-}
-.panel h3 { margin-top:0; color:var(--deep); }
-label { display:block; font-size:13px; font-weight:800; margin:13px 0 6px; }
-input,select,textarea {
-  width:100%; padding:13px; border-radius:12px;
-  border:1px solid #d8e3ef; background:#fbfdff; color:var(--ink);
-  outline-color:var(--blue);
-}
-textarea { min-height:90px; resize:vertical; }
-.full { width:100%; margin-top:16px; }
-.notice { color:var(--muted); font-size:12px; }
-.contact-list { display:grid; gap:12px; }
-.contact-row {
-  display:flex; align-items:center; gap:13px;
-  padding:15px; border-radius:16px; background:#f3f8ff;
-}
-.contact-row .symbol { font-size:25px; }
-.contact-row strong { display:block; }
-.contact-row small { color:var(--muted); }
-.contact-row a { color:var(--blue); font-weight:800; }
-.qr-wrap { text-align:center; padding:20px; background:#fff9e8; border-radius:20px; margin-top:16px; }
-.qr-wrap img { width:150px; height:150px; max-width:100%; background:white; padding:8px; border-radius:12px; }
-.qr-wrap p { margin:7px 0; font-size:13px; }
-.feedback-stars { display:flex; gap:7px; margin:10px 0; }
-.star {
-  border:0; background:#edf3fa; color:#9aa8b9;
-  font-size:29px; padding:3px 8px; border-radius:10px; cursor:pointer;
-}
-.star.selected { background:#fff0bd; color:#d69500; }
-footer { background:linear-gradient(135deg,#123b75,#1769d2); color:white; padding:32px 0; }
-.footer-row { display:flex; flex-wrap:wrap; justify-content:space-between; gap:18px; align-items:center; }
-footer p { margin:5px 0; color:#e0edff; font-size:13px; }
-footer a { color:white; font-weight:800; }
-.bottom-bar {
-  position:fixed; bottom:0; left:0; right:0; z-index:20;
-  display:none; grid-template-columns:1fr 1fr; gap:9px;
-  padding:10px; background:#ffffffef; backdrop-filter:blur(12px);
-  box-shadow:0 -5px 20px #123b7515;
-}
-.bottom-bar .btn { padding:12px 8px; font-size:14px; }
-@media(max-width:760px) {
-  .nav-links a:not(.btn) { display:none; }
-  .nav-links { gap:8px; }
-  .nav-links .btn { padding:10px 12px; font-size:12px; }
-  .brand strong { font-size:14px; }
-  .brand small { font-size:10px; }
-  .logo { width:41px; height:41px; border-radius:13px; }
-  .hero { padding:37px 0 35px; }
-  .hero-grid,.booking-grid { grid-template-columns:1fr; }
-  .hero-grid { gap:30px; }
-  .hero p { font-size:15px; }
-  .car-stage { margin:0 7px; transform:none; }
-  .float-one { left:-6px; }
-  .float-two { right:-5px; }
-  .cards { grid-template-columns:1fr; }
-  .section { padding:45px 0; }
-  .bottom-bar { display:grid; }
-  footer { padding-bottom:88px; }
-}
-@media(prefers-reduced-motion:reduce) {
-  *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; }
-}
-</style>
-</head>
-
-<body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="#home" aria-label="Maidh Taxi Service home">
-      <span class="logo">🚖</span>
-      <span><strong>MAIDH TAXI SERVICE</strong><small>Ambala City, Haryana</small></span>
-    </a>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-blue" href="#booking">Book Now ↗</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-<section class="hero" id="home">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow">✨ YOUR JOURNEY, OUR PRIORITY</span>
-      <h1>Every Journey<br>Feels <span class="gradient-text">Special.</span></h1>
-      <p>Comfortable taxi service for family trips, airport transfers, local travel and outstation journeys. Travel with comfort and confidence.</p>
-      <div class="actions">
-        <a class="btn btn-gold" href="#booking">🚘 Book Your Taxi</a>
-        <a class="btn btn-green" href="https://wa.me/919467676070?text=Hello%20Maidh%20Taxi%20Service%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" rel="noopener">WhatsApp Us</a>
-      </div>
-      <p class="hero-note">📍 Ambala City, Haryana · Friendly service · Easy booking</p>
-      <button class="btn btn-blue" id="voiceBtn" type="button">🔊 Hear Welcome</button>
-    </div>
-    <div class="car-stage">
-      <span class="float-card float-one">⭐ Customer-first service</span>
-      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1100&q=85" alt="Premium car for a comfortable journey" fetchpriority="high">
-      <span class="float-card float-two">🛣️ Let's get you there!</span>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="services">
-  <div class="container">
-    <div class="section-title">
-      <h2>Travel Your Way</h2>
-      <p>Choose the journey you need. Contact us for availability and fare details.</p>
-    </div>
-    <div class="cards">
-      <article class="card">
-        <div class="card-icon">🏙️</div>
-        <h3>Local Taxi</h3>
-        <p>Convenient rides around Ambala and nearby areas.</p>
-      </article>
-      <article class="card">
-        <div class="card-icon">✈️</div>
-        <h3>Airport Transfers</h3>
-        <p>Plan your airport journey in advance with our team.</p>
-      </article>
-      <article class="card">
-        <div class="card-icon">🌄</div>
-        <h3>Outstation Trips</h3>
-        <p>Travel for family visits, holidays and long-distance trips.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section section-tint" id="booking">
-  <div class="container">
-    <div class="section-title">
-      <h2>Book Your Taxi</h2>
-      <p>Enter your trip details. Your message will open in WhatsApp for you to send.</p>
-    </div>
-    <div class="booking-grid">
-      <form class="panel" id="bookingForm">
-        <h3>🚖 Trip Details</h3>
-        <label for="customerName">Your name</label>
-        <input id="customerName" name="name" autocomplete="name" placeholder="Enter your name" required>
-
-        <label for="pickup">Pickup location</label>
-        <input id="pickup" name="pickup" placeholder="Where should we pick you up?" required>
-
-        <label for="destination">Destination</label>
-        <input id="destination" name="destination" placeholder="Where do you want to go?" required>
-
-        <label for="tripDate">Travel date</label>
-        <input id="tripDate" name="date" type="date" required>
-
-        <label for="vehicle">Preferred vehicle</label>
-        <select id="vehicle" name="vehicle">
-          <option>SUV / Ertiga</option>
-          <option>Other available taxi</option>
-          <option>Please recommend a vehicle</option>
-        </select>
-
-        <label for="tripNotes">Additional details (optional)</label>
-        <textarea id="tripNotes" name="notes" placeholder="Passengers, luggage or other requests"></textarea>
-
-        <button class="btn btn-green full" type="submit">Continue to WhatsApp ↗</button>
-        <p class="notice">Your details are not stored by this webpage. WhatsApp opens so you can review and send your booking request.</p>
-      </form>
-
-      <div class="panel" id="contact">
-        <h3>📞 We're Here to Help</h3>
-        <div class="contact-list">
-          <div class="contact-row">
-            <span class="symbol">📱</span>
-            <div><strong>Main contact</strong><small>Calls and WhatsApp</small><br><a href="tel:+919467676070">9467670607</a></div>
-          </div>
-          <div class="contact-row">
-            <span class="symbol">🆘</span>
-            <div><strong>Emergency contact</strong><small>For urgent taxi-related contact</small><br><a href="tel:+919671006004">9671006004</a></div>
-          </div>
-          <div class="contact-row">
-            <span class="symbol">📍</span>
-            <div><strong>Service location</strong><small>Ambala City, Haryana, India</small></div>
-          </div>
-        </div>
-
-        <div class="qr-wrap">
-          <h3>📲 Scan to Visit Our Website</h3>
-          <img id="websiteQR" alt="QR code for Maidh Taxi Service website" width="150" height="150">
-          <p>Scan the code to open our official website.</p>
-          <a href="https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/" target="_blank" rel="noopener">Open official website ↗</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="feedback">
-  <div class="container">
-    <div class="section-title">
-      <h2>We Value Your Feedback 💛</h2>
-      <p>Share a suggestion or tell us about your experience.</p>
-    </div>
-    <form class="panel" id="feedbackForm" style="max-width:650px;margin:auto">
-      <label for="rating">Your rating</label>
-      <div class="feedback-stars" role="group" aria-label="Choose a rating from one to five stars">
-        <button type="button" class="star" data-rating="1" aria-label="1 star">★</button>
-        <button type="button" class="star" data-rating="2" aria-label="2 stars">★</button>
-        <button type="button" class="star" data-rating="3" aria-label="3 stars">★</button>
-        <button type="button" class="star" data-rating="4" aria-label="4 stars">★</button>
-        <button type="button" class="star" data-rating="5" aria-label="5 stars">★</button>
-      </div>
-      <input type="hidden" id="rating" value="5">
-
-      <label for="feedbackName">Your name (optional)</label>
-      <input id="feedbackName" placeholder="Enter your name">
-
-      <label for="feedbackMessage">Feedback or suggestion</label>
-      <textarea id="feedbackMessage" placeholder="Tell us what went well or what we can improve." required></textarea>
-
-      <button class="btn btn-blue full" type="submit">Send Feedback Privately via WhatsApp</button>
-      <p class="notice">Your feedback opens in WhatsApp for you to send. It is not automatically published on this website.</p>
-    </form>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="container footer-row">
-    <div>
-      <strong>🚖 MAIDH TAXI SERVICE</strong>
-      <p>Comfortable journeys. Friendly service.</p>
-      <p>Ambala City, Haryana, India</p>
-    </div>
-    <div>
-      <a href="tel:+919467676070">Call: 9467670607</a>
-      <p><a href="tel:+919671006004">Emergency contact: 9671006004</a></p>
-      <p>© <span id="year"></span> Maidh Taxi Service</p>
-    </div>
-  </div>
-</footer>
-
-<div class="bottom-bar" aria-label="Quick contact">
-  <a class="btn btn-blue" href="tel:+919467676070">📞 Call Us</a>
-  <a class="btn btn-green" href="https://wa.me/919467676070?text=Hello%20Maidh%20Taxi%20Service%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" rel="noopener">WhatsApp</a>
-</div>
-
-<script>
-"use strict";
-
-const WEBSITE_URL =
-  "https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/";
-const WHATSAPP_NUMBER = "919467676070";
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-document.getElementById("websiteQR").src =
-  "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" +
-  encodeURIComponent(WEBSITE_URL);
-
-document.getElementById("voiceBtn").addEventListener("click", function () {
-  if (!("speechSynthesis" in window)) {
-    alert("Voice welcome is not supported by this browser. You can still use the website normally.");
-    return;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maidh Taxi Service | All India Taxi & Airport Transfers</title>
+  <meta name="description" content="Colourful, customer-friendly Maidh Taxi Service website for local rides, All India taxi travel, airport transfers and outstation journeys. Call or WhatsApp 9467670607.">
+  <meta name="theme-color" content="#1769d2">
+  <meta name="robots" content="index, follow">
+  <!-- Keep this Google Search Console verification tag when updating the site. -->
+  <meta name="google-site-verification" content="uRoaM_bAw8yTTsswlhWGQ42d6Tj4LWotsFkiiYJtLX4">
+  <link rel="canonical" href="https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Maidh Taxi Service | All India Taxi & Airport Transfers">
+  <meta property="og:description" content="Request local, outstation and airport taxi travel across India. Discuss vehicle options, fare, extra charges and payment terms with Maidh Taxi Service on WhatsApp.">
+  <meta property="og:url" content="https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=85">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "Maidh Taxi Service",
+    "url": "https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/",
+    "telephone": "+919467670607",
+    "email": "maidhtaxiserviceambala@gmail.com",
+    "areaServed": {"@type": "Country", "name": "India"}
   }
-  window.speechSynthesis.cancel();
-  const welcome = new SpeechSynthesisUtterance(
-    "Welcome to Maidh Taxi Service, Ambala City. Your journey is our priority. Contact us to plan your next trip. We wish you a comfortable journey."
-  );
-  welcome.lang = "en-IN";
-  welcome.rate = 0.92;
-  window.speechSynthesis.speak(welcome);
-});
+  </script>
+  <style>
+    :root{--navy:#071b3a;--blue:#103b70;--blue2:#1765a8;--gold:#d9ad4f;--gold-light:#f6df9d;--ink:#17243a;--muted:#5d6b7d;--paper:#f5f8fc;--white:#fff;--line:#dce4ef;--shadow:0 16px 42px rgba(7,27,58,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}a{color:inherit}img{display:block;max-width:100%}.wrap{width:min(1120px,92%);margin:auto}
+    .topbar{background:#041229;color:#e8eef8;font-size:.9rem}.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:8px 0}.topbar a{text-decoration:none;color:var(--gold-light)}
+    header{background:linear-gradient(115deg,var(--navy),#10477f);color:white;border-bottom:4px solid var(--gold)}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0}.brand{display:flex;align-items:center;gap:13px;text-decoration:none}.brand-mark{width:54px;height:54px;display:grid;place-items:center;border:2px solid var(--gold);border-radius:15px;color:var(--gold-light);font-size:1.45rem;font-weight:900}.brand strong{display:block;font-size:1.2rem;letter-spacing:.4px}.brand small{display:block;color:#d5e3f5;letter-spacing:2px;text-transform:uppercase;font-size:.7rem}.navlinks{display:flex;gap:20px;align-items:center;flex-wrap:wrap}.navlinks a{text-decoration:none;font-weight:700;font-size:.92rem}.navlinks a:hover{color:var(--gold-light)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:9px;text-decoration:none;font-weight:800;border:0;cursor:pointer}.nav-cta,.btn-gold{background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#15243a}.btn-blue{background:var(--blue2);color:white}.btn-outline{border:1px solid rgba(255,255,255,.6);color:white;background:transparent}
+    .hero{background:linear-gradient(90deg,rgba(4,18,41,.94) 0%,rgba(4,28,59,.84) 52%,rgba(4,28,59,.3) 100%),url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=2000&q=90') center/cover no-repeat;color:white}.hero-inner{min-height:490px;display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;padding:58px 0}.eyebrow{color:var(--gold-light);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.78rem}.hero h1{font-size:clamp(2.25rem,5vw,4rem);line-height:1.08;margin:12px 0 18px;max-width:720px}.hero h1 span{color:var(--gold-light)}.hero p{max-width:650px;color:#e4edf9;font-size:1.08rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.hero-note{font-size:.86rem!important;color:#c9d9ec!important;margin-top:16px}.booking-card{background:white;color:var(--ink);padding:25px;border-radius:18px;box-shadow:var(--shadow);border-top:5px solid var(--gold)}.booking-card h2{margin:0 0 5px;font-size:1.4rem}.booking-card>p{margin:0 0 18px;color:var(--muted);font-size:.92rem}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-weight:700;font-size:.84rem}.field input,.field select,.field textarea{font:inherit;font-size:.95rem;width:100%;padding:11px 12px;border:1px solid #ccd7e5;border-radius:8px;background:#fbfdff;color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #8cb8e8;border-color:var(--blue2)}.field textarea{min-height:76px;resize:vertical}.booking-card button{width:100%;margin-top:15px;font-size:1rem}.privacy-note{font-size:.77rem;color:var(--muted);margin-top:10px}
+    .trust-strip{background:white;border-bottom:1px solid var(--line)}.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:19px 0}.trust-item{display:flex;gap:11px;align-items:center}.trust-icon{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;border-radius:12px;background:#fff4d7;color:#7b5711;font-size:1.2rem}.trust-item strong{display:block;font-size:.94rem}.trust-item small{display:block;color:var(--muted);font-size:.8rem}
+    section{padding:66px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 32px}.section-head .eyebrow{color:#9a701b}.section-head h2{font-size:clamp(1.8rem,3vw,2.55rem);line-height:1.15;margin:8px 0 12px;color:var(--navy)}.section-head p{color:var(--muted);margin:0}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service-card{background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 6px 20px rgba(7,27,58,.05)}.service-card img{width:100%;height:190px;object-fit:cover}.service-body{padding:20px}.service-body h3{margin:0 0 8px;color:var(--navy)}.service-body p{color:var(--muted);font-size:.94rem;margin:0}.service-body a{display:inline-block;margin-top:13px;color:#145c99;font-weight:800;text-decoration:none}
+    .vehicle-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.vehicle-card{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 6px 20px rgba(7,27,58,.05)}.vehicle-card img{width:100%;height:155px;object-fit:cover}.vehicle-card .service-body{padding:16px}.vehicle-card h3{margin:0 0 5px;color:var(--navy)}.vehicle-card p{margin:0;color:var(--muted);font-size:.9rem}.vehicle-tag{display:inline-block;margin-top:10px;background:#fff4d7;color:#76530f;border-radius:20px;padding:4px 9px;font-size:.76rem;font-weight:800}.fare-policy{background:#fff}.policy-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.policy-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:23px}.policy-card h3{margin:0 0 10px;color:var(--navy)}.policy-card p,.policy-card li{color:var(--muted);font-size:.95rem}.payment-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.payment-step{background:#f5f8fc;border-radius:10px;padding:14px}.payment-step strong{display:block;color:var(--navy);font-size:1.35rem}.payment-step span{font-size:.85rem;color:var(--muted)}.policy-note{background:#fff7e5;border-left:4px solid var(--gold);padding:12px 14px;border-radius:7px;color:#5b481d;font-size:.9rem;margin-top:14px}
+    .all-india{background:linear-gradient(125deg,#071b3a,#103b70);color:white}.all-india .section-head h2{color:white}.all-india .section-head p{color:#d6e2f2}.route-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px auto 0}.route-pills span{border:1px solid rgba(246,223,157,.5);color:#f6df9d;border-radius:30px;padding:8px 14px;font-size:.9rem}.all-india .center-action{text-align:center;margin-top:30px}
+    .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{background:white;border:1px solid var(--line);padding:23px;border-radius:14px}.step-num{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:var(--navy);color:var(--gold-light);font-weight:900}.step h3{margin:13px 0 5px}.step p{color:var(--muted);margin:0;font-size:.94rem}
+    .contact-band{padding:0 0 65px}.contact-panel{background:linear-gradient(115deg,#fff,#fff7e5);border:1px solid #ead6a7;border-radius:18px;padding:28px;display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap}.contact-panel h2{margin:0;color:var(--navy)}.contact-panel p{margin:4px 0 0;color:var(--muted)}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}
+    footer{background:#041229;color:#d9e4f2;padding:35px 0 18px}.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:25px}.footer-grid h3,.footer-grid h4{color:var(--gold-light);margin:0 0 10px}.footer-grid p{margin:5px 0;color:#c0ccdc;font-size:.92rem}.footer-grid a{color:#f2d98e;text-decoration:none}.copyright{border-top:1px solid #23344c;margin-top:25px;padding-top:14px;text-align:center;font-size:.8rem;color:#aab8ca}
+    .wa-float{position:fixed;right:17px;bottom:17px;z-index:20;background:#168b51;color:white;text-decoration:none;border-radius:40px;padding:13px 17px;font-weight:800;box-shadow:0 8px 24px #0003}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.fleet-card{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 6px 20px rgba(7,27,58,.05)}.fleet-card img{width:100%;height:175px;object-fit:cover}.fleet-body{padding:18px}.fleet-body h3{margin:0 0 5px;color:var(--navy)}.fleet-body p{margin:0;color:var(--muted);font-size:.91rem}.fleet-tag{display:inline-block;margin-top:10px;background:#fff4d7;color:#785512;border-radius:20px;padding:4px 9px;font-size:.78rem;font-weight:800}.terms-section{background:#fff}.terms-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.terms-card{background:#f8fafd;border:1px solid var(--line);border-radius:15px;padding:22px}.terms-card h3{margin:0 0 10px;color:var(--navy)}.terms-card ul{padding-left:20px;margin:0;color:var(--muted)}.terms-card li{margin:7px 0}.payment-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.payment-step{padding:16px;border-radius:12px;background:#071b3a;color:white}.payment-step strong{display:block;color:var(--gold-light);font-size:1.25rem}.payment-step span{font-size:.9rem}.terms-note{margin-top:18px;padding:14px 16px;border-left:4px solid var(--gold);background:#fff7e5;border-radius:0 10px 10px 0;color:#55451f;font-size:.92rem}
+    @media(max-width:850px){.vehicle-grid{grid-template-columns:1fr 1fr}.policy-grid{grid-template-columns:1fr}.nav{align-items:flex-start}.navlinks{justify-content:flex-end;gap:12px}.hero-inner{grid-template-columns:1fr;gap:25px;padding:42px 0}.booking-card{max-width:650px}.services,.fleet-grid{grid-template-columns:1fr 1fr}.terms-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.vehicle-grid,.payment-steps{grid-template-columns:1fr}.topbar .wrap{justify-content:center;text-align:center}.nav{flex-direction:column;align-items:stretch}.navlinks{justify-content:flex-start}.navlinks a:not(.nav-cta){font-size:.85rem}.hero-inner{min-height:0;padding:40px 0}.hero h1{font-size:2.45rem}.trust-grid{grid-template-columns:1fr}.services,.fleet-grid,.how-grid,.footer-grid,.payment-steps{grid-template-columns:1fr}.service-card img{height:205px}section{padding:48px 0}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-panel{padding:22px}.wa-float{right:12px;bottom:12px;padding:11px 14px;font-size:.9rem}}
 
-document.getElementById("bookingForm").addEventListener("submit", function (event) {
-  event.preventDefault();
+    /* Bright colourful premium 3D refresh — original sections and SEO retained */
+    :root{--navy:#123b75;--blue:#1769d2;--blue2:#1769d2;--gold:#ffc83d;--gold-light:#ffe78a;--paper:#f4f9ff;--line:#d9e8f7;--shadow:0 18px 45px rgba(23,105,210,.16)}
+    body{background:linear-gradient(180deg,#f7fbff 0%,#ffffff 48%,#f1fffb 100%)}
+    .topbar{background:#123b75}.topbar a{color:#ffe78a}
+    header{background:linear-gradient(115deg,#1769d2,#12b8a6);border-bottom:4px solid #ffc83d;box-shadow:0 8px 28px #1769d225}
+    .brand-mark{background:linear-gradient(135deg,#fff,#e0f8ff);color:#1769d2;border-color:#ffc83d;box-shadow:0 8px 18px #001b3b22}
+    .hero{background:radial-gradient(ellipse at 90% 10%,#12b8a655,transparent 34%),linear-gradient(115deg,rgba(15,74,145,.88),rgba(23,105,210,.72),rgba(18,184,166,.50)),url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=2000&q=90') center/cover no-repeat;color:#fff}
+    .hero-inner{gap:28px}.booking-card,.service-card,.vehicle-card,.fleet-card,.policy-card,.terms-card,.step{border-radius:20px;box-shadow:0 15px 34px #1769d214;transition:transform .22s,box-shadow .22s}
+    .booking-card{border-top:5px solid #12b8a6;transform:perspective(900px) rotateY(-1deg)}
+    .service-card:hover,.vehicle-card:hover,.fleet-card:hover,.step:hover{transform:translateY(-5px);box-shadow:0 20px 38px #1769d225}
+    .btn,.nav-cta{border-radius:14px;box-shadow:0 7px 16px #123b7516;transition:transform .2s,box-shadow .2s}
+    .btn-gold,.nav-cta{background:linear-gradient(135deg,#ffe78a,#ffc83d);color:#17365d}
+    .btn-blue{background:linear-gradient(135deg,#1769d2,#398cf0);color:#fff}
+    .btn-teal{background:linear-gradient(135deg,#12b8a6,#078c87);color:#fff}
+    .trust-icon{background:linear-gradient(135deg,#fff0b8,#ffe17a);box-shadow:0 6px 14px #ffc83d25}
+    .section-head .eyebrow{color:#087f85}.all-india{background:radial-gradient(ellipse at 90% 10%,#12b8a655,transparent 34%),linear-gradient(125deg,#1769d2,#123b75 70%,#078c87)}
+    .payment-step{background:linear-gradient(145deg,#1769d2,#123b75);box-shadow:0 7px 16px #1769d222}.payment-step strong{color:#ffe78a}
+    .terms-note,.policy-note{background:#fff7dc;border-left-color:#ffc83d}
+    .contact-panel{background:linear-gradient(120deg,#eaf5ff,#e4fff8,#fff7dc);border-color:#b7d9f7;box-shadow:0 12px 30px #1769d214}
+    .map-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:7px}.map-link{display:inline-flex;align-items:center;gap:5px;background:#e5f3ff;color:#1457a6;padding:7px 10px;border-radius:10px;font-weight:800;font-size:.78rem;text-decoration:none}
+    .voice-card,.feedback-card{background:linear-gradient(135deg,#fff,#eaf7ff 58%,#eafff8);border:1px solid #d8eaf9;border-radius:20px;padding:24px;box-shadow:0 14px 32px #1769d214}
+    .voice-card{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:20px 0 0}.voice-card h3,.feedback-card h3{margin:0;color:#123b75}.voice-card p,.feedback-card p{color:#5d6b7d;margin:4px 0 0}
+    .stars{display:flex;gap:7px;margin:9px 0}.star-btn{border:0;background:#e8f0fa;color:#9aa8b9;border-radius:10px;padding:4px 9px;font-size:27px;cursor:pointer}.star-btn.active{background:#fff0b8;color:#d69500}
+    .customer-confirm{display:flex;align-items:flex-start;gap:10px;background:#effaf7;border:1px solid #bdece2;padding:12px;border-radius:12px;margin-top:14px;font-size:.84rem}.customer-confirm input{width:auto;margin-top:5px;flex:0 0 auto}
+    .map-route-panel{background:#fff;border:1px solid #d9e8f7;border-radius:16px;padding:15px;margin-top:14px}.map-route-panel h3{margin:0 0 6px;color:#123b75;font-size:1rem}.map-route-panel p{margin:0;color:#5d6b7d;font-size:.85rem}
+    .wa-float{background:linear-gradient(135deg,#12b886,#078c57);box-shadow:0 10px 24px #078c5740}
+    @media(max-width:600px){.booking-card{transform:none}.voice-card{align-items:flex-start}.map-actions .map-link{flex:1;justify-content:center}}
 
-  const name = document.getElementById("customerName").value.trim();
-  const pickup = document.getElementById("pickup").value.trim();
-  const destination = document.getElementById("destination").value.trim();
-  const date = document.getElementById("tripDate").value;
-  const vehicle = document.getElementById("vehicle").value;
-  const notes = document.getElementById("tripNotes").value.trim();
+    /* PREMIUM BLACK & GOLD LUXURY DESIGN — keeps all existing site features */
+    :root{--navy:#090d18;--blue:#101a2d;--blue2:#b58b3b;--gold:#d8b15a;--gold-light:#f6e3a4;--ink:#202331;--muted:#626777;--paper:#f7f5ef;--line:#e8dfca;--shadow:0 20px 48px rgba(10,13,24,.15)}
+    body{background:#f7f5ef;color:#202331}
+    .topbar{background:#05070d;color:#f5edda}.topbar a{color:#f6e3a4}
+    header{background:linear-gradient(115deg,#05070d 0%,#111a2b 62%,#302617 100%);border-bottom:3px solid #d8b15a;box-shadow:0 9px 30px #05070d30}
+    .brand-mark{background:linear-gradient(145deg,#f9edc8,#c49a45);color:#101522;border:2px solid #fff0bd;box-shadow:0 8px 22px #0006}
+    .brand small{color:#e7d5a3}.navlinks a:hover{color:#f6e3a4}
+    .nav-cta,.btn-gold{background:linear-gradient(135deg,#fff0b8 0%,#d8b15a 48%,#a97b27 100%);color:#141722;border:1px solid #f8e5a9;box-shadow:0 7px 18px #d8b15a38}
+    .btn-blue{background:linear-gradient(135deg,#17233a,#05070d);color:#f8e8b5;border:1px solid #caa24d}
+    .btn-teal{background:linear-gradient(135deg,#315b55,#15332f);color:#fff}
+    .hero{background:linear-gradient(90deg,rgba(4,6,12,.96) 0%,rgba(9,15,27,.88) 55%,rgba(12,17,27,.58) 100%),url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=2000&q=90') center/cover no-repeat}
+    .eyebrow{color:#f6e3a4}.hero h1 span{color:#f6e3a4}.hero p{color:#f0eee8}
+    .booking-card{border-top:5px solid #d8b15a;background:linear-gradient(145deg,#fff 0%,#fcf8ed 100%);box-shadow:0 24px 55px #0004;transform:perspective(1000px) rotateY(-1deg)}
+    .booking-card h2,.service-body h3,.vehicle-card h3,.fleet-body h3,.policy-card h3,.terms-card h3,.step h3,.contact-panel h2{color:#111827}
+    .service-card,.vehicle-card,.fleet-card,.policy-card,.terms-card,.step{border:1px solid #e4d5b1;background:linear-gradient(145deg,#fff,#fcf8ee);box-shadow:0 12px 30px rgba(22,20,15,.08);transition:transform .22s,box-shadow .22s}
+    .service-card:hover,.vehicle-card:hover,.fleet-card:hover,.step:hover{transform:translateY(-6px);box-shadow:0 22px 42px rgba(22,20,15,.16)}
+    .section-head .eyebrow{color:#9a742a}.section-head h2{color:#101522}
+    .trust-strip{background:#fffdf8;border-bottom:1px solid #e8dfca}.trust-icon{background:linear-gradient(135deg,#fff1c4,#d8b15a);color:#28200e;box-shadow:0 6px 15px #d8b15a25}
+    .vehicle-tag,.fleet-tag{background:linear-gradient(135deg,#fff1c4,#f1d78b);color:#5b4215;border:1px solid #e4c76d}
+    .fare-policy,.terms-section{background:#fffdf8}.payment-step{background:linear-gradient(145deg,#111827,#05070d);border:1px solid #b78d3b;box-shadow:0 9px 22px #05070d20}.payment-step strong{color:#f6e3a4}
+    .terms-note,.policy-note{background:#fff7df;border-left-color:#c99a37;color:#51411e}
+    .all-india{background:radial-gradient(ellipse at 90% 5%,#d8b15a30,transparent 35%),linear-gradient(125deg,#05070d,#111a2b 65%,#342719)}
+    .all-india .section-head h2{color:#fff}.all-india .section-head .eyebrow{color:#f6e3a4}.route-pills span{border-color:#d8b15a;color:#f6e3a4;background:#ffffff08}
+    .step-num{background:linear-gradient(145deg,#f6e3a4,#b58b3b);color:#111827;box-shadow:0 5px 12px #d8b15a35}
+    .contact-panel{background:linear-gradient(120deg,#fffdf8,#f5ebd2);border:1px solid #dfc783;box-shadow:0 15px 35px #19140a12}
+    footer{background:linear-gradient(125deg,#05070d,#111a2b 72%,#2b2114);border-top:3px solid #b58b3b}footer .footer-grid h3,footer .footer-grid h4{color:#f6e3a4}footer .footer-grid a{color:#f6e3a4}
+    .voice-card,.feedback-card{background:linear-gradient(135deg,#fffdf8,#f5ebd2);border:1px solid #e1cf9c;box-shadow:0 14px 34px #15100a12}
+    .voice-card h3,.feedback-card h3,.map-route-panel h3{color:#111827}.map-link{background:#f5ebd2;color:#4b3710;border:1px solid #e1cf9c}.map-route-panel{border-color:#e1cf9c;background:#fffdf8}
+    .customer-confirm{background:#f6f4eb;border-color:#e2d7b6}.star-btn.active{background:#fff0b8;color:#9a6b00}
+    .wa-float{background:linear-gradient(135deg,#21845b,#125d41);box-shadow:0 10px 26px #05070d45}
+    .btn:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:0 11px 24px #0003}
+    @media(max-width:600px){.booking-card{transform:none}.hero h1{font-size:2.3rem}.nav-cta,.btn{min-height:44px}}
 
-  const message =
-    "Hello Maidh Taxi Service! I would like to request a taxi booking.\n\n" +
-    "Name: " + name + "\n" +
-    "Pickup: " + pickup + "\n" +
-    "Destination: " + destination + "\n" +
-    "Travel date: " + date + "\n" +
-    "Preferred vehicle: " + vehicle + "\n" +
-    "Additional details: " + (notes || "None") + "\n\n" +
-    "Please confirm availability and fare.";
+  </style>
+</head>
+<body>
+  <section class="waheguru-banner" style="text-align:center;padding:12px 10px;background:linear-gradient(90deg,#1769d2,#12b8a6);color:#fff;border-bottom:3px solid #ffc83d" aria-label="Welcome to Maidh Taxi Service">
+    <p style="margin:0;font-weight:800;font-size:clamp(1rem,2.5vw,1.25rem)">🙏 Welcome to Maidh Taxi Service</p>
+    <p style="margin:2px 0 8px;font-size:.9rem">Your journey, our priority · Ambala City, Haryana</p>
+    <button class="btn btn-gold" id="voiceWelcome" type="button" style="padding:8px 13px">🔊 Hear Welcome</button>
+  </section>
+  <div class="topbar"><div class="wrap"><span>All India Taxi Service · Local, Outstation & Airport Transfers</span><span>Call/WhatsApp: <a href="tel:+919467670607">+91 94676 70607</a></span></div></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Maidh Taxi Service home"><span class="brand-mark" aria-hidden="true">MT</span><span><strong>Maidh Taxi Service</strong><small>Your journey, our priority</small></span></a>
+      <nav class="navlinks" aria-label="Main navigation"><a href="#services">Services</a><a href="#vehicles">Cars</a><a href="#routes">All India</a><a href="#how-to-book">How to book</a><a href="#contact">Contact</a><a class="nav-cta" href="#booking">Book a Taxi ↗</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home"><div class="wrap hero-inner">
+      <div><div class="eyebrow">Comfort · Convenience · Reliable travel</div><h1>Search your route. <span>Travel across India.</span></h1><p>Request a taxi from your pickup city to your destination anywhere in India. Choose a sedan, family MUV, SUV or group vehicle, then confirm availability, fare and all trip terms with Maidh Taxi Service on WhatsApp.</p><div class="hero-actions"><a class="btn btn-gold" href="#booking">Book on WhatsApp ↗</a><a class="btn btn-outline" href="tel:+919467670607">Call 9467670607</a></div><p class="hero-note">All India travel enquiries welcome. Fare, vehicle and availability are confirmed before your trip.</p></div>
+      <div class="booking-card" id="booking"><h2>Request a taxi booking</h2><p>Fill in your trip details. The form will prepare a WhatsApp message for you to send.</p>
+        <form id="bookingForm">
+          <div class="form-grid">
+            <div class="field"><label for="customerName">Your name *</label><input id="customerName" name="customerName" autocomplete="name" required maxlength="80" placeholder="Enter your name"></div>
+            <div class="field"><label for="customerPhone">Your mobile number *</label><input id="customerPhone" name="customerPhone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="20" placeholder="Your contact number"></div>
+            <div class="field full"><label for="customerId">Customer ID / existing booking reference (if already issued)</label><input id="customerId" name="customerId" maxlength="80" placeholder="Leave blank for a new customer"></div>
+            <div class="field"><label for="pickup">Pickup location *</label><input id="pickup" name="pickup" required maxlength="120" placeholder="Enter pickup city / full address"><div class="map-actions"><a class="map-link" id="pickupMap" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">📍 Choose pickup on Google Maps</a></div></div>
+            <div class="field"><label for="dropoff">Drop location *</label><input id="dropoff" name="dropoff" required maxlength="120" placeholder="Enter destination / airport"><div class="map-actions"><a class="map-link" id="dropoffMap" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">🏁 Choose drop on Google Maps</a></div></div>
+            <div class="field"><label for="travelDate">Travel date *</label><input id="travelDate" name="travelDate" type="date" required></div>
+            <div class="field"><label for="travelTime">Pickup time</label><input id="travelTime" name="travelTime" type="time"></div>
+            <div class="field"><label for="tripType">Trip type *</label><select id="tripType" name="tripType" required><option value="" disabled selected>Select trip type</option><option>One-way</option><option>Round trip</option><option>Local / hourly</option><option>Airport transfer</option></select></div>
+            <div class="field"><label for="vehicle">Vehicle preference</label><select id="vehicle" name="vehicle"><option>Recommend a suitable vehicle</option><option>Maruti Suzuki Dzire (Sedan)</option><option>Maruti Suzuki Ertiga (6/7-seater MPV)</option><option>Toyota Innova / Innova Crysta</option><option>Kia Carens</option><option>Maruti Suzuki Swift / similar hatchback</option><option>Premium SUV (model to be confirmed)</option><option>Tempo Traveller / group travel</option></select></div>
+            <div class="field full"><label for="passengers">Number of passengers</label><select id="passengers" name="passengers"><option>1–3 passengers</option><option>4–6 passengers</option><option>7 or more passengers</option></select></div>
+            <div class="field full"><label for="notes">Extra details (optional)</label><textarea id="notes" name="notes" maxlength="500" placeholder="Return date, flight details, luggage, or other requests"></textarea></div>
+          </div>
+          <label class="customer-confirm"><input type="checkbox" id="bookingTerms" required><span>I understand this is only a booking request, not a confirmed booking. I will confirm my customer ID / identity details directly with Maidh Taxi Service before the booking is finalised. The team must also confirm trip details, vehicle availability, total fare, all extra charges, payment method, cancellation/refund terms and payment schedule before I pay.</span></label>
+          <button class="btn btn-gold" type="submit">Confirm Details & Continue to WhatsApp ↗</button>
+          <div class="privacy-note">Your details are placed in a WhatsApp message. Nothing is submitted to this website. Review the message and tap Send in WhatsApp to contact us. Vehicle models are preferences only and depend on availability.</div>
+          <p id="formStatus" class="sr-only" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div></section>
+    <div class="trust-strip"><div class="wrap trust-grid"><div class="trust-item"><span class="trust-icon" aria-hidden="true">🚕</span><span><strong>Flexible trip options</strong><small>Local, one-way and round trips</small></span></div><div class="trust-item"><span class="trust-icon" aria-hidden="true">✈️</span><span><strong>Airport transfers</strong><small>Pickup and drop-off requests</small></span></div><div class="trust-item"><span class="trust-icon" aria-hidden="true">🇮🇳</span><span><strong>All India enquiries</strong><small>Ask about your route and dates</small></span></div></div></div>
+    <section id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">Travel made simpler</div><h2>Taxi services for your journey</h2><p>Choose the kind of trip you need and send us your route. We'll confirm the details with you directly.</p></div><div class="services">
+      <article class="service-card"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=85" alt="Modern car ready for a taxi journey" loading="lazy"><div class="service-body"><h3>Local & city travel</h3><p>Request point-to-point rides, appointments, shopping trips and local travel. Share your pickup and destination to check availability.</p><a href="#booking">Request local taxi →</a></div></article>
+      <article class="service-card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="Open road through a scenic landscape for an outstation journey" loading="lazy"><div class="service-body"><h3>Outstation & All India</h3><p>Plan intercity journeys, family trips and longer routes across India. One-way and round-trip enquiries are welcome.</p><a href="#booking">Plan an outstation trip →</a></div></article>
+      <article class="service-card"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=85" alt="Passenger aircraft at an airport" loading="lazy"><div class="service-body"><h3>Airport transfers</h3><p>Request airport pickup or drop-off. Include your flight time and terminal details in the extra information field.</p><a href="#booking">Request airport taxi →</a></div></article>
+    </div></div></section>
+    <section id="vehicles"><div class="wrap"><div class="section-head"><div class="eyebrow">Choose a ride for your trip</div><h2>Popular cars used for taxi travel in India</h2><p>Request a suitable vehicle for your passenger count, luggage and route. The exact model, availability and fare will be confirmed before booking.</p></div><div class="vehicle-grid">
+      <article class="vehicle-card"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=85" alt="Sedan car example for city and outstation taxi travel" loading="lazy"><div class="service-body"><h3>Maruti Suzuki Dzire</h3><p>Compact sedan option for everyday rides, airport transfers and suitable small-group journeys.</p><span class="vehicle-tag">SEDAN</span></div></article>
+      <article class="vehicle-card"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=85" alt="Family car example for taxi journeys" loading="lazy"><div class="service-body"><h3>Maruti Suzuki Ertiga</h3><p>Family-friendly MPV option for group travel, with seating and luggage capacity confirmed for the trip.</p><span class="vehicle-tag">FAMILY / MPV</span></div></article>
+      <article class="vehicle-card"><img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=85" alt="Premium multi-purpose vehicle example for outstation travel" loading="lazy"><div class="service-body"><h3>Toyota Innova / Crysta</h3><p>A popular MPV category to request for longer journeys and family or business travel.</p><span class="vehicle-tag">COMFORT MPV</span></div></article>
+      <article class="vehicle-card"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=85" alt="Premium car example for comfortable travel" loading="lazy"><div class="service-body"><h3>Kia Carens / Similar</h3><p>Ask about other suitable MPVs or premium options based on your route and availability.</p><span class="vehicle-tag">MULTI-PURPOSE</span></div></article>
+    </div><p class="privacy-note" style="text-align:center;margin-top:18px">Vehicle photos are illustrative and may not show the exact model supplied. Vehicle make, model, seating, luggage space and availability must be confirmed with us.</p></div></section>
+    <section id="fleet"><div class="wrap"><div class="section-head"><div class="eyebrow">Choose the vehicle for your trip</div><h2>Popular Indian taxi car options</h2><p>Request the vehicle that suits your passengers and luggage. The models below are examples of what you can ask for; the exact model, year and availability will be confirmed before booking.</p></div><div class="fleet-grid">
+      <article class="fleet-card"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=85" alt="Modern sedan car suitable for city and outstation taxi travel" loading="lazy"><div class="fleet-body"><h3>Dzire or similar sedan</h3><p>For solo travellers, couples and small families with lighter luggage.</p><span class="fleet-tag">Sedan · Example model</span></div></article>
+      <article class="fleet-card"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=900&q=85" alt="Family car for comfortable taxi travel" loading="lazy"><div class="fleet-body"><h3>Ertiga or similar MUV</h3><p>A family-friendly option when you need more seats and cabin space.</p><span class="fleet-tag">Family MUV · Example model</span></div></article>
+      <article class="fleet-card"><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=85" alt="Large utility vehicle for family outstation travel" loading="lazy"><div class="fleet-body"><h3>Innova / Innova Crysta or similar</h3><p>Ask about a spacious MUV for family trips and longer journeys.</p><span class="fleet-tag">Premium MUV · Example model</span></div></article>
+      <article class="fleet-card"><img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=85" alt="SUV-style vehicle for an outstation journey" loading="lazy"><div class="fleet-body"><h3>Bolero or similar SUV</h3><p>Ask about SUV options suitable for your route and group size.</p><span class="fleet-tag">SUV · Example model</span></div></article>
+      <article class="fleet-card"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=85" alt="Modern passenger car for airport and city transfers" loading="lazy"><div class="fleet-body"><h3>Swift, Aura or similar</h3><p>Ask about an economical small-car option when suitable for your trip.</p><span class="fleet-tag">Hatchback / compact sedan</span></div></article>
+      <article class="fleet-card"><img src="https://images.unsplash.com/photo-1518306721680-2e7b9b9b4b1a?auto=format&fit=crop&w=900&q=85" alt="Road travel vehicle for a group journey" loading="lazy"><div class="fleet-body"><h3>Tempo Traveller / group vehicle</h3><p>For larger groups, ask us to check the right seating capacity and availability.</p><span class="fleet-tag">Group travel · On request</span></div></article>
+    </div><div class="center-action" style="text-align:center;margin-top:28px"><a class="btn btn-blue" href="#booking">Choose a vehicle and request booking ↗</a></div></div></section>
+    <section class="all-india" id="routes"><div class="wrap"><div class="section-head"><div class="eyebrow">From your city to your destination</div><h2>All India taxi travel enquiries</h2><p>Tell us where your journey starts and ends. Routes, vehicle options, estimated fare and availability can be discussed directly before confirming your booking.</p></div><div class="route-pills" aria-label="Example route types"><span>City to city</span><span>Airport pickup & drop</span><span>One-way journeys</span><span>Round trips</span><span>Family travel</span><span>Business travel</span><span>Outstation trips</span></div><div class="center-action"><a class="btn btn-gold" href="#booking">Share your route on WhatsApp ↗</a></div></div></section>
+    <section class="fare-policy" id="fare-policy"><div class="wrap"><div class="section-head"><div class="eyebrow">Clear terms before you travel</div><h2>Fare, extra charges & payment terms</h2><p>Discuss and confirm the complete trip estimate and terms with Maidh Taxi Service before the booking is finalised.</p></div><div class="policy-grid"><article class="policy-card"><h3>Charges to discuss before booking</h3><p>Please ask us to explain which charges apply to your specific trip. Depending on the route and arrangement, these may include:</p><ul><li>Late-night or early-morning charges, if applicable</li><li>Food or driver allowance, if applicable</li><li>Parking fees</li><li>Tolls, state taxes and other route-related taxes</li><li>Extra kilometres, waiting time, route changes or additional travel</li></ul><div class="policy-note"><strong>No surprises:</strong> Any applicable extra charges should be discussed with you and agreed before the booking is confirmed. Ask for the final fare breakdown in writing on WhatsApp.</div></article><article class="policy-card"><h3>Proposed payment schedule</h3><p>Payment schedule to be confirmed with the booking team before you pay:</p><div class="payment-steps"><div class="payment-step"><strong>20%</strong><span>At booking confirmation</span></div><div class="payment-step"><strong>60%</strong><span>At pickup time</span></div><div class="payment-step"><strong>20%</strong><span>Before drop-off</span></div></div><div class="policy-note">The percentages are based on the agreed trip amount. Confirm the total fare, payment method, cancellation/refund terms and any exceptions with us before making a payment. Do not pay until you have received booking confirmation.</div></article></div></div></section>
+    <section class="terms-section" id="charges"><div class="wrap"><div class="section-head"><div class="eyebrow">Clear terms before you travel</div><h2>Fare, extra charges & payment schedule</h2><p>We discuss and confirm the trip fare, vehicle, inclusions and any applicable extra charges with you before the booking is finalised.</p></div><div class="terms-grid"><article class="terms-card"><h3>Charges to discuss before booking</h3><ul><li>Late-night or early-morning travel charges, if applicable</li><li>Food or driver allowance, if applicable</li><li>Parking and airport entry charges, if applicable</li><li>Applicable tolls, state taxes and other government charges</li><li>Extra kilometres, extra hours, route changes, waiting time or additional travel</li><li>Any other charge relevant to the specific trip</li></ul></article><article class="terms-card"><h3>Proposed payment schedule</h3><p style="margin-top:0;color:var(--muted)">Based on the total fare agreed with you:</p><div class="payment-steps"><div class="payment-step"><strong>20%</strong><span>At booking confirmation</span></div><div class="payment-step"><strong>60%</strong><span>At pickup time</span></div><div class="payment-step"><strong>20%</strong><span>Before drop-off</span></div></div><p style="color:var(--muted);font-size:.9rem;margin-bottom:0;margin-top:14px">The exact amount, payment method and timing will be confirmed directly with you before payment.</p></article></div><div class="terms-note"><strong>Please note:</strong> Do not assume extra charges are included in the base fare. Ask us to list and confirm all applicable charges and the total payable amount on WhatsApp before you confirm the booking or make a payment. Enjoy your journey with Maidh Taxi Service!</div></div></section>
+    <section id="how-to-book"><div class="wrap"><div class="section-head"><div class="eyebrow">Three simple steps</div><h2>How to request your booking</h2><p>Bookings are confirmed only after the trip details and availability are discussed with our team.</p></div><div class="how-grid"><article class="step"><div class="step-num">1</div><h3>Enter your trip details</h3><p>Add your name, contact number, pickup, destination and travel date in the form.</p></article><article class="step"><div class="step-num">2</div><h3>Open WhatsApp</h3><p>Tap “Continue to WhatsApp”. Your details will appear as a message to Maidh Taxi Service.</p></article><article class="step"><div class="step-num">3</div><h3>Confirm with us</h3><p>Review the message, tap Send, and confirm customer/trip details, vehicle availability, total fare, extra charges, cancellation/refund terms and the 20% / 60% / 20% payment schedule before making payment. Your booking is not confirmed until our team confirms it.</p></article></div></div></section>
 
-  window.open(
-    "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message),
-    "_blank",
-    "noopener"
-  );
-});
+    <section id="feedback"><div class="wrap"><div class="section-head"><div class="eyebrow">Your experience matters</div><h2>Customer Feedback & Rating</h2><p>Share your suggestion privately with Maidh Taxi Service on WhatsApp.</p></div><form class="feedback-card" id="feedbackForm" style="max-width:700px;margin:auto"><h3>⭐ Rate your experience</h3><div class="stars" role="group" aria-label="Choose a star rating"><button class="star-btn active" type="button" data-star="1" aria-label="1 star">★</button><button class="star-btn active" type="button" data-star="2" aria-label="2 stars">★</button><button class="star-btn active" type="button" data-star="3" aria-label="3 stars">★</button><button class="star-btn active" type="button" data-star="4" aria-label="4 stars">★</button><button class="star-btn active" type="button" data-star="5" aria-label="5 stars">★</button></div><input type="hidden" id="feedbackRating" value="5"><div class="field"><label for="feedbackName">Your name (optional)</label><input id="feedbackName" maxlength="80" placeholder="Your name"></div><div class="field" style="margin-top:12px"><label for="feedbackText">Your feedback or suggestion *</label><textarea id="feedbackText" maxlength="1000" required placeholder="Tell us how we can improve"></textarea></div><button class="btn btn-teal" type="submit" style="margin-top:14px">Send Feedback Privately on WhatsApp ↗</button><p class="privacy-note">Feedback opens as a WhatsApp message for you to review and send. It is not automatically published or stored on this website.</p></form></div></section>
 
-let selectedRating = 5;
-document.querySelectorAll(".star").forEach(function (button) {
-  button.addEventListener("click", function () {
-    selectedRating = Number(button.dataset.rating);
-    document.getElementById("rating").value = String(selectedRating);
-    document.querySelectorAll(".star").forEach(function (star) {
-      const active = Number(star.dataset.rating) <= selectedRating;
-      star.classList.toggle("selected", active);
-      star.setAttribute("aria-pressed", String(Number(star.dataset.rating) === selectedRating));
-    });
-  });
-});
-document.querySelectorAll('.star[data-rating="5"]')[0].click();
+    <div class="contact-band" id="contact"><div class="wrap"><div class="contact-panel"><div><h2>Ready to plan your next trip?</h2><p>Call or WhatsApp us with your route and travel date.</p></div><div class="contact-actions"><a class="btn btn-gold" href="https://wa.me/919467670607" target="_blank" rel="noopener noreferrer">WhatsApp booking</a><a class="btn btn-blue" href="tel:+919467670607">Call us</a><a class="btn btn-blue" href="mailto:maidhtaxiserviceambala@gmail.com">Email us</a></div></div></div></div>
 
-document.getElementById("feedbackForm").addEventListener("submit", function (event) {
-  event.preventDefault();
+    <section id="website-qr" style="padding-top:0"><div class="wrap"><div class="voice-card"><div><h3>📲 Scan our official website</h3><p>Share this QR code so customers can open Maidh Taxi Service on their phone.</p><a class="btn btn-blue" style="margin-top:10px" href="https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/" target="_blank" rel="noopener noreferrer">Open Official GitHub Website ↗</a></div><img id="websiteQR" width="145" height="145" loading="lazy" alt="QR code for the official Maidh Taxi Service website" style="width:145px;height:145px;border:8px solid #fff;border-radius:12px;box-shadow:0 8px 22px #123b7520"></div></div></section>
 
-  const name = document.getElementById("feedbackName").value.trim() || "Not provided";
-  const feedback = document.getElementById("feedbackMessage").value.trim();
-  const message =
-    "Maidh Taxi Service — Customer Feedback\n\n" +
-    "Name: " + name + "\n" +
-    "Rating: " + selectedRating + "/5 stars\n" +
-    "Feedback: " + feedback + "\n\n" +
-    "Please review this feedback privately.";
+  </main>
+  <footer><div class="wrap"><div class="footer-grid"><div><h3>Maidh Taxi Service</h3><p>Local rides, outstation journeys and airport transfer booking enquiries across India.</p><p>Website: <a href="https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/">maidhtaxiserviceambala3169.github.io/maidh-taxi-service/</a></p></div><div><h4>Contact</h4><p>Booking phone / WhatsApp: <a href="tel:+919467670607">9467670607</a></p><p>Email: <a href="mailto:maidhtaxiserviceambala@gmail.com">maidhtaxiserviceambala@gmail.com</a></p></div><div><h4>Emergency contact</h4><p><a href="tel:+919671006004">9671006004</a></p><p>For immediate assistance, call directly. This website is a booking enquiry page and is not an emergency response service.</p></div></div><div class="copyright">© <span id="year">2026</span> Maidh Taxi Service. All rights reserved.</div></div></footer>
+  <a class="wa-float" href="https://wa.me/919467670607" target="_blank" rel="noopener noreferrer" aria-label="Chat with Maidh Taxi Service on WhatsApp">WhatsApp us ↗</a>
+  <script>
+    (function () {
+      'use strict';
+      var form = document.getElementById('bookingForm');
+      var status = document.getElementById('formStatus');
+      var dateInput = document.getElementById('travelDate');
+      var today = new Date();
+      var localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+      dateInput.min = localToday;
+      document.getElementById('year').textContent = String(today.getFullYear());
 
-  window.open(
-    "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message),
-    "_blank",
-    "noopener"
-  );
-});
-</script>
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+
+        var data = new FormData(form);
+        var value = function (key) {
+          var item = data.get(key);
+          return item ? String(item).trim() : '';
+        };
+        var lines = [
+          'Hello Maidh Taxi Service, I would like to request a taxi booking.',
+          '',
+          'Name: ' + value('customerName'),
+          'Customer mobile: ' + value('customerPhone'),
+          'Customer ID / existing booking reference: ' + (value('customerId') || 'New customer / not issued'),
+          'Pickup: ' + value('pickup'),
+          'Pickup Google Maps search: https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(value('pickup')),
+          'Destination: ' + value('dropoff'),
+          'Destination Google Maps search: https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(value('dropoff')),
+          'Google Maps route: https://www.google.com/maps/dir/?api=1&origin=' + encodeURIComponent(value('pickup')) + '&destination=' + encodeURIComponent(value('dropoff')),
+          'Travel date: ' + value('travelDate'),
+          'Pickup time: ' + (value('travelTime') || 'Not specified'),
+          'Trip type: ' + value('tripType'),
+          'Vehicle preference: ' + value('vehicle'),
+          'Passengers: ' + value('passengers'),
+          'Extra details: ' + (value('notes') || 'None'),
+          '',
+          'Please confirm the total fare and all applicable charges before booking, including late-night charges, food/driver allowance, parking, tolls/taxes, extra travel, waiting time or any other charge.',
+          'Proposed payment schedule to confirm: 20% at booking confirmation, 60% at pickup, and remaining 20% before drop-off.',
+          '',
+          'IMPORTANT: This is a booking request, not a confirmed booking. Please verify/confirm customer ID or identity details with me before final booking confirmation, and confirm trip details and vehicle availability.',
+          'Please confirm total fare and every applicable charge before confirming: late-night/early-morning charges, driver food/allowance, parking, airport entry, tolls, state taxes, extra kilometres/hours, waiting, route changes and other additional travel.',
+          'Payment schedule proposed for confirmation: 20% at booking confirmation, 60% at pickup, and 20% before drop-off.',
+          'Please confirm payment method, cancellation/refund terms, inclusions/exclusions and final amount in writing before any payment. Thank you.'
+        ];
+        var whatsappUrl = 'https://wa.me/919467670607?text=' + encodeURIComponent(lines.join('\n'));
+        status.textContent = 'Opening WhatsApp with your booking details. Review the message and press Send.';
+        // Navigate directly to WhatsApp from the user's submit action.
+        // This avoids popup-blocker issues and prevents a normal page refresh.
+        window.location.assign(whatsappUrl);
+      });
+
+      // Open Google Maps search links as pickup/drop fields are entered.
+      function updateMapLinks() {
+        var pickup = document.getElementById('pickup').value.trim();
+        var dropoff = document.getElementById('dropoff').value.trim();
+        document.getElementById('pickupMap').href = pickup ? 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(pickup) : 'https://www.google.com/maps';
+        document.getElementById('dropoffMap').href = dropoff ? 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(dropoff) : 'https://www.google.com/maps';
+      }
+      document.getElementById('pickup').addEventListener('input', updateMapLinks);
+      document.getElementById('dropoff').addEventListener('input', updateMapLinks);
+
+      // Voice welcome uses the browser's built-in speech synthesis; no recording is sent.
+      document.getElementById('voiceWelcome').addEventListener('click', function () {
+        if (!('speechSynthesis' in window)) { alert('Voice welcome is not supported by this browser. You can still use the website normally.'); return; }
+        window.speechSynthesis.cancel();
+        var welcome = new SpeechSynthesisUtterance('Welcome to Maidh Taxi Service, Ambala City, Haryana. Your journey is our priority. Enter your pickup and drop locations, choose your travel date, and contact us on WhatsApp to request your booking. Please confirm your fare and all conditions before making payment. Have a comfortable journey.');
+        welcome.lang = 'en-IN'; welcome.rate = 0.92; window.speechSynthesis.speak(welcome);
+      });
+
+      // QR code points only to the official GitHub Pages site.
+      var siteUrl = 'https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/';
+      document.getElementById('websiteQR').src = 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(siteUrl);
+
+      // Feedback is composed for WhatsApp; it is not saved or published automatically.
+      var selectedStars = 5;
+      document.querySelectorAll('[data-star]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          selectedStars = Number(button.getAttribute('data-star'));
+          document.getElementById('feedbackRating').value = String(selectedStars);
+          document.querySelectorAll('[data-star]').forEach(function (star) {
+            star.classList.toggle('active', Number(star.getAttribute('data-star')) <= selectedStars);
+          });
+        });
+      });
+      document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (!event.currentTarget.reportValidity()) return;
+        var name = document.getElementById('feedbackName').value.trim() || 'Not provided';
+        var feedback = document.getElementById('feedbackText').value.trim();
+        var message = 'Maidh Taxi Service — Customer Feedback\n\nName: ' + name + '\nRating: ' + selectedStars + '/5 stars\nFeedback: ' + feedback + '\n\nPlease review this feedback privately. This is not a public website review.';
+        window.location.assign('https://wa.me/919467670607?text=' + encodeURIComponent(message));
+      });
+    }());
+  </script>
 </body>
 </html>
