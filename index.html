@@ -2,568 +2,457 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="Maidh Taxi Service, Ambala City, Haryana. Book comfortable local and outstation taxi rides.">
-  <title>Maidh Taxi Service | Premium Travel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1769d2">
+<meta name="description" content="Maidh Taxi Service, Ambala City, Haryana. Book comfortable taxis for family trips, airport transfers and outstation travel. Call or WhatsApp us today.">
+<title>Maidh Taxi Service | Ambala City</title>
 
-  <style>
-    :root {
-      --gold: #d8b45b;
-      --gold-light: #f7df96;
-      --black: #080808;
-      --panel: #151515;
-      --text: #f8f5ed;
-      --muted: #c0b9a9;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: var(--black);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
-
-    a { color: inherit; }
-
-    .topbar {
-      text-align: center;
-      padding: 10px;
-      background: var(--gold);
-      color: #111;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    header {
-      padding: 24px 16px;
-      text-align: center;
-      border-bottom: 1px solid #393020;
-    }
-
-    .brand {
-      color: var(--gold-light);
-      font-size: clamp(26px, 6vw, 42px);
-      line-height: 1.2;
-      font-weight: 900;
-      letter-spacing: 1px;
-    }
-
-    .tagline { color: var(--muted); margin: 8px 0 0; }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px 20px;
-      padding: 14px 10px;
-      background: #101010;
-      position: sticky;
-      top: 0;
-      z-index: 5;
-      border-bottom: 1px solid #332a18;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-size: 14px;
-      color: var(--gold-light);
-    }
-
-    .hero {
-      padding: 65px 18px;
-      text-align: center;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.48), #080808 100%),
-        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85")
-        center 55% / cover no-repeat;
-    }
-
-    .eyebrow {
-      color: var(--gold-light);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    h1 {
-      max-width: 800px;
-      margin: 12px auto;
-      font-size: clamp(34px, 8vw, 62px);
-      line-height: 1.12;
-    }
-
-    h2 { color: var(--gold-light); line-height: 1.25; }
-
-    .hero p {
-      max-width: 600px;
-      margin: 18px auto 24px;
-      color: #eee8dc;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      border: 1px solid var(--gold);
-      border-radius: 8px;
-      padding: 12px 18px;
-      font-size: 15px;
-      font-weight: bold;
-      text-decoration: none;
-      cursor: pointer;
-      text-align: center;
-      font-family: inherit;
-      transition: transform .2s, background .2s;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .primary {
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      color: #15110a;
-    }
-
-    .secondary { background: #111; color: var(--gold-light); }
-
-    main {
-      width: min(1080px, 100%);
-      margin: auto;
-      padding: 20px 16px 50px;
-    }
-
-    section {
-      padding: 32px 0;
-      scroll-margin-top: 80px;
-    }
-
-    .section-heading { text-align: center; margin-bottom: 24px; }
-
-    .section-heading p { color: var(--muted); }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      background: linear-gradient(145deg, #191919, #0e0e0e);
-      border: 1px solid #42351d;
-      border-radius: 14px;
-      padding: 22px;
-    }
-
-    .symbol { font-size: 30px; }
-
-    .card h3 { color: var(--gold-light); margin: 8px 0; }
-
-    .card p { color: var(--muted); margin-bottom: 0; }
-
-    .voice-box {
-      text-align: center;
-      background: #17140d;
-      border: 1px solid var(--gold);
-      border-radius: 16px;
-      padding: 25px 18px;
-    }
-
-    .voice-box p { max-width: 650px; margin: 12px auto 20px; }
-
-    .form-card {
-      max-width: 650px;
-      margin: auto;
-      background: var(--panel);
-      border: 1px solid #42351d;
-      border-radius: 14px;
-      padding: 22px;
-    }
-
-    label {
-      display: block;
-      margin: 15px 0 6px;
-      font-weight: bold;
-      color: var(--gold-light);
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 13px;
-      border-radius: 8px;
-      border: 1px solid #605033;
-      background: #090909;
-      color: white;
-      font: inherit;
-    }
-
-    textarea { min-height: 115px; resize: vertical; }
-
-    .stars {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 10px 0;
-    }
-
-    .star {
-      font-size: 32px;
-      background: transparent;
-      color: #777;
-      border: 0;
-      cursor: pointer;
-      padding: 0 3px;
-    }
-
-    .star.selected { color: var(--gold-light); }
-
-    .small { color: var(--muted); font-size: 13px; }
-
-    .notice {
-      border-left: 3px solid var(--gold);
-      padding: 10px 14px;
-      background: #211c11;
-      color: #eee4cc;
-      font-size: 13px;
-      margin-top: 18px;
-    }
-
-    .qr {
-      display: block;
-      width: 190px;
-      height: 190px;
-      max-width: 100%;
-      background: white;
-      padding: 8px;
-      border-radius: 10px;
-      margin: 20px auto;
-    }
-
-    footer {
-      text-align: center;
-      padding: 28px 16px;
-      border-top: 1px solid #40331d;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    footer strong { color: var(--gold-light); }
-
-    @media (max-width: 480px) {
-      .hero { padding: 48px 15px; }
-      .btn { width: 100%; }
-      .actions { gap: 10px; }
-      .form-card { padding: 17px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition: none !important; }
-    }
-  </style>
+<style>
+:root {
+  --blue:#1769d2;
+  --deep:#123b75;
+  --turquoise:#12b8a6;
+  --gold:#ffc83d;
+  --ink:#183153;
+  --muted:#63738a;
+  --white:#fff;
+  --light:#f2f8ff;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.6;
+}
+a { text-decoration:none; }
+button,input,select,textarea { font:inherit; }
+button,a { -webkit-tap-highlight-color:transparent; }
+.container { width:min(1120px,92%); margin:auto; }
+header {
+  position:sticky; top:0; z-index:10;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  box-shadow:0 3px 18px #123b7510;
+}
+.nav {
+  display:flex; justify-content:space-between; align-items:center;
+  gap:12px; padding:12px 0;
+}
+.brand { display:flex; align-items:center; gap:10px; }
+.logo {
+  width:48px; height:48px; border-radius:16px;
+  display:grid; place-items:center; font-size:27px;
+  background:linear-gradient(135deg,var(--blue),var(--turquoise));
+  box-shadow:0 7px 18px #1769d235;
+}
+.brand strong { display:block; color:var(--deep); font-size:17px; line-height:1.2; }
+.brand small { color:var(--muted); font-size:12px; }
+.nav-links { display:flex; align-items:center; gap:18px; }
+.nav-links a { color:var(--ink); font-weight:700; font-size:14px; }
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:8px; padding:13px 19px; border:0; border-radius:14px;
+  font-weight:800; cursor:pointer; transition:transform .2s,box-shadow .2s;
+}
+.btn:hover { transform:translateY(-2px); box-shadow:0 9px 22px #123b7522; }
+.btn-blue { color:white; background:linear-gradient(135deg,var(--blue),#398cf0); }
+.btn-gold { color:#26354a; background:linear-gradient(135deg,#ffdb67,var(--gold)); }
+.btn-green { color:white; background:linear-gradient(135deg,#079e83,var(--turquoise)); }
+.btn-white { color:var(--deep); background:white; }
+.hero {
+  overflow:hidden; position:relative;
+  background:
+    radial-gradient(ellipse at 90% 5%,#ffe28d88,transparent 34%),
+    radial-gradient(ellipse at 5% 90%,#75e6d755,transparent 34%),
+    linear-gradient(135deg,#f4f9ff,#fff 60%,#f0fffb);
+  padding:58px 0 48px;
+}
+.hero-grid { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:30px; }
+.eyebrow {
+  display:inline-block; padding:7px 12px; border-radius:50px;
+  color:var(--deep); background:#e2f2ff; font-size:13px; font-weight:800;
+}
+h1 { font-size:clamp(36px,5.4vw,60px); line-height:1.08; margin:18px 0; letter-spacing:-1.8px; }
+.gradient-text {
+  background:linear-gradient(90deg,var(--blue),var(--turquoise));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hero p { font-size:17px; color:var(--muted); max-width:510px; }
+.actions { display:flex; flex-wrap:wrap; gap:12px; margin:24px 0; }
+.hero-note { font-size:13px!important; }
+.car-stage {
+  position:relative; padding:16px; border-radius:32px;
+  background:linear-gradient(145deg,#ffffff,#e5f4ff);
+  box-shadow:0 24px 55px #1769d225, inset 0 1px 0 white;
+  transform:perspective(1000px) rotateY(-3deg);
+}
+.car-stage img {
+  display:block; width:100%; aspect-ratio:4/3; object-fit:cover;
+  border-radius:23px; box-shadow:0 12px 28px #123b7522;
+}
+.float-card {
+  position:absolute; padding:11px 15px; border-radius:16px;
+  background:white; box-shadow:0 12px 30px #123b7520;
+  font-weight:800; font-size:13px;
+}
+.float-one { left:-12px; top:28px; }
+.float-two { right:-10px; bottom:28px; background:#fff6d9; }
+.section { padding:62px 0; }
+.section-tint { background:var(--light); }
+.section-title { text-align:center; margin-bottom:32px; }
+.section-title h2 { margin:0 0 8px; font-size:clamp(27px,4vw,38px); color:var(--deep); }
+.section-title p { margin:0; color:var(--muted); }
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.card {
+  padding:23px; background:white; border-radius:23px;
+  border:1px solid #e5edf7; box-shadow:0 10px 30px #123b750b;
+  transition:transform .2s,box-shadow .2s;
+}
+.card:hover { transform:translateY(-4px); box-shadow:0 16px 35px #123b7517; }
+.card-icon {
+  width:56px; height:56px; display:grid; place-items:center;
+  border-radius:18px; font-size:27px; margin-bottom:12px;
+  background:#e6f2ff;
+}
+.card:nth-child(2) .card-icon { background:#ddfbf4; }
+.card:nth-child(3) .card-icon { background:#fff3cb; }
+.card h3 { margin:5px 0; color:var(--deep); }
+.card p { color:var(--muted); margin:0; font-size:14px; }
+.booking-grid { display:grid; grid-template-columns:1fr 1fr; gap:25px; align-items:start; }
+.panel {
+  background:white; border-radius:24px; padding:25px;
+  border:1px solid #e3edf7; box-shadow:0 12px 35px #123b750d;
+}
+.panel h3 { margin-top:0; color:var(--deep); }
+label { display:block; font-size:13px; font-weight:800; margin:13px 0 6px; }
+input,select,textarea {
+  width:100%; padding:13px; border-radius:12px;
+  border:1px solid #d8e3ef; background:#fbfdff; color:var(--ink);
+  outline-color:var(--blue);
+}
+textarea { min-height:90px; resize:vertical; }
+.full { width:100%; margin-top:16px; }
+.notice { color:var(--muted); font-size:12px; }
+.contact-list { display:grid; gap:12px; }
+.contact-row {
+  display:flex; align-items:center; gap:13px;
+  padding:15px; border-radius:16px; background:#f3f8ff;
+}
+.contact-row .symbol { font-size:25px; }
+.contact-row strong { display:block; }
+.contact-row small { color:var(--muted); }
+.contact-row a { color:var(--blue); font-weight:800; }
+.qr-wrap { text-align:center; padding:20px; background:#fff9e8; border-radius:20px; margin-top:16px; }
+.qr-wrap img { width:150px; height:150px; max-width:100%; background:white; padding:8px; border-radius:12px; }
+.qr-wrap p { margin:7px 0; font-size:13px; }
+.feedback-stars { display:flex; gap:7px; margin:10px 0; }
+.star {
+  border:0; background:#edf3fa; color:#9aa8b9;
+  font-size:29px; padding:3px 8px; border-radius:10px; cursor:pointer;
+}
+.star.selected { background:#fff0bd; color:#d69500; }
+footer { background:linear-gradient(135deg,#123b75,#1769d2); color:white; padding:32px 0; }
+.footer-row { display:flex; flex-wrap:wrap; justify-content:space-between; gap:18px; align-items:center; }
+footer p { margin:5px 0; color:#e0edff; font-size:13px; }
+footer a { color:white; font-weight:800; }
+.bottom-bar {
+  position:fixed; bottom:0; left:0; right:0; z-index:20;
+  display:none; grid-template-columns:1fr 1fr; gap:9px;
+  padding:10px; background:#ffffffef; backdrop-filter:blur(12px);
+  box-shadow:0 -5px 20px #123b7515;
+}
+.bottom-bar .btn { padding:12px 8px; font-size:14px; }
+@media(max-width:760px) {
+  .nav-links a:not(.btn) { display:none; }
+  .nav-links { gap:8px; }
+  .nav-links .btn { padding:10px 12px; font-size:12px; }
+  .brand strong { font-size:14px; }
+  .brand small { font-size:10px; }
+  .logo { width:41px; height:41px; border-radius:13px; }
+  .hero { padding:37px 0 35px; }
+  .hero-grid,.booking-grid { grid-template-columns:1fr; }
+  .hero-grid { gap:30px; }
+  .hero p { font-size:15px; }
+  .car-stage { margin:0 7px; transform:none; }
+  .float-one { left:-6px; }
+  .float-two { right:-5px; }
+  .cards { grid-template-columns:1fr; }
+  .section { padding:45px 0; }
+  .bottom-bar { display:grid; }
+  footer { padding-bottom:88px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; }
+}
+</style>
 </head>
 
 <body>
-  <div class="topbar">PREMIUM TRAVEL • AMBALA CITY • HARYANA</div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Maidh Taxi Service home">
+      <span class="logo">🚖</span>
+      <span><strong>MAIDH TAXI SERVICE</strong><small>Ambala City, Haryana</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-blue" href="#booking">Book Now ↗</a>
+    </nav>
+  </div>
+</header>
 
-  <header>
-    <div class="brand">MAIDH TAXI SERVICE</div>
-    <p class="tagline">Your Journey. Our Priority.</p>
-  </header>
-
-  <nav aria-label="Main navigation">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#voice">Voice Assistant</a>
-    <a href="#feedback">Feedback</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section class="hero" id="home">
-    <div class="eyebrow">Travel in comfort</div>
-    <h1>Your Trusted Travel Partner</h1>
-    <p>
-      Comfortable journeys, friendly service and convenient taxi booking
-      for local travel and outstation trips.
-    </p>
-    <div class="actions">
-      <a class="btn primary"
-         href="https://candid-dolphin-4915c7.netlify.app/">
-        Book Your Taxi
-      </a>
-      <a class="btn secondary"
-         href="https://wa.me/919467676070">
-        WhatsApp Us
-      </a>
-      <button class="btn secondary" onclick="playWelcome()">
-        🔊 Hear Welcome
-      </button>
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">✨ YOUR JOURNEY, OUR PRIORITY</span>
+      <h1>Every Journey<br>Feels <span class="gradient-text">Special.</span></h1>
+      <p>Comfortable taxi service for family trips, airport transfers, local travel and outstation journeys. Travel with comfort and confidence.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="#booking">🚘 Book Your Taxi</a>
+        <a class="btn btn-green" href="https://wa.me/919467676070?text=Hello%20Maidh%20Taxi%20Service%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+      <p class="hero-note">📍 Ambala City, Haryana · Friendly service · Easy booking</p>
+      <button class="btn btn-blue" id="voiceBtn" type="button">🔊 Hear Welcome</button>
     </div>
-  </section>
+    <div class="car-stage">
+      <span class="float-card float-one">⭐ Customer-first service</span>
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1100&q=85" alt="Premium car for a comfortable journey" fetchpriority="high">
+      <span class="float-card float-two">🛣️ Let's get you there!</span>
+    </div>
+  </div>
+</section>
 
-  <main>
-    <section id="services">
-      <div class="section-heading">
-        <div class="eyebrow">Why travel with us</div>
-        <h2>Our Services</h2>
-        <p>Personal service for your next journey.</p>
-      </div>
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Travel Your Way</h2>
+      <p>Choose the journey you need. Contact us for availability and fare details.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon">🏙️</div>
+        <h3>Local Taxi</h3>
+        <p>Convenient rides around Ambala and nearby areas.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon">✈️</div>
+        <h3>Airport Transfers</h3>
+        <p>Plan your airport journey in advance with our team.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🌄</div>
+        <h3>Outstation Trips</h3>
+        <p>Travel for family visits, holidays and long-distance trips.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-      <div class="grid">
-        <article class="card">
-          <div class="symbol">🚖</div>
-          <h3>Local Taxi</h3>
-          <p>Convenient rides around Ambala and nearby locations.</p>
-        </article>
-        <article class="card">
-          <div class="symbol">🛣️</div>
-          <h3>Outstation Trips</h3>
-          <p>Plan your journey to destinations outside the city.</p>
-        </article>
-        <article class="card">
-          <div class="symbol">✈️</div>
-          <h3>Airport Transfers</h3>
-          <p>Arrange a taxi for your airport travel requirements.</p>
-        </article>
-      </div>
-    </section>
+<section class="section section-tint" id="booking">
+  <div class="container">
+    <div class="section-title">
+      <h2>Book Your Taxi</h2>
+      <p>Enter your trip details. Your message will open in WhatsApp for you to send.</p>
+    </div>
+    <div class="booking-grid">
+      <form class="panel" id="bookingForm">
+        <h3>🚖 Trip Details</h3>
+        <label for="customerName">Your name</label>
+        <input id="customerName" name="name" autocomplete="name" placeholder="Enter your name" required>
 
-    <section id="voice">
-      <div class="voice-box">
-        <div class="eyebrow">Your digital welcome assistant</div>
-        <h2>Welcome to Maidh Taxi Service</h2>
-        <p id="voiceText">
-          Welcome to Maidh Taxi Service, Ambala! Your trusted partner
-          for comfortable and reliable journeys. Book your ride today.
-          Thank you for choosing Maidh Taxi Service!
-        </p>
-        <div class="actions">
-          <button class="btn primary" onclick="playWelcome()">
-            🔊 Play Welcome
-          </button>
-          <button class="btn secondary" onclick="stopVoice()">
-            Stop Voice
-          </button>
-          <button class="btn secondary" onclick="speakFeedbackHelp()">
-            🔊 Explain Feedback
-          </button>
-        </div>
-        <p class="small">
-          For privacy and browser compatibility, voice starts when a
-          customer taps a button. Sound availability depends on the device.
-        </p>
-      </div>
-    </section>
+        <label for="pickup">Pickup location</label>
+        <input id="pickup" name="pickup" placeholder="Where should we pick you up?" required>
 
-    <section id="feedback">
-      <div class="section-heading">
-        <div class="eyebrow">Your opinion matters</div>
-        <h2>Rate Us & Share Suggestions</h2>
-        <p>Help us improve the service we provide.</p>
-      </div>
+        <label for="destination">Destination</label>
+        <input id="destination" name="destination" placeholder="Where do you want to go?" required>
 
-      <form class="form-card" id="feedbackForm">
-        <label for="customerName">Your name (optional)</label>
-        <input id="customerName" name="customerName"
-               maxlength="80" placeholder="Enter your name">
+        <label for="tripDate">Travel date</label>
+        <input id="tripDate" name="date" type="date" required>
 
-        <label>Rate your experience</label>
-        <div class="stars" role="group" aria-label="Choose a rating">
-          <button type="button" class="star" data-rating="1"
-                  aria-label="1 star">★</button>
-          <button type="button" class="star" data-rating="2"
-                  aria-label="2 stars">★</button>
-          <button type="button" class="star" data-rating="3"
-                  aria-label="3 stars">★</button>
-          <button type="button" class="star" data-rating="4"
-                  aria-label="4 stars">★</button>
-          <button type="button" class="star" data-rating="5"
-                  aria-label="5 stars">★</button>
-        </div>
-        <p id="ratingText" class="small">Please select 1 to 5 stars.</p>
+        <label for="vehicle">Preferred vehicle</label>
+        <select id="vehicle" name="vehicle">
+          <option>SUV / Ertiga</option>
+          <option>Other available taxi</option>
+          <option>Please recommend a vehicle</option>
+        </select>
 
-        <label for="suggestions">Your suggestions</label>
-        <textarea id="suggestions" name="suggestions"
-                  maxlength="1500"
-                  placeholder="How can we improve our service?"></textarea>
+        <label for="tripNotes">Additional details (optional)</label>
+        <textarea id="tripNotes" name="notes" placeholder="Passengers, luggage or other requests"></textarea>
 
-        <button class="btn primary" type="submit">
-          Send Feedback Privately
-        </button>
-
-        <div class="notice">
-          Your feedback will be prepared as a private WhatsApp message
-          to our business number. You can review the message before sending.
-          It will not be automatically published on this website or Google.
-        </div>
-
-        <p id="formMessage" class="small" role="status" aria-live="polite"></p>
+        <button class="btn btn-green full" type="submit">Continue to WhatsApp ↗</button>
+        <p class="notice">Your details are not stored by this webpage. WhatsApp opens so you can review and send your booking request.</p>
       </form>
 
-      <div class="card" style="margin-top:20px;text-align:center">
-        <h3>Want to leave a Google review?</h3>
-        <p>
-          Use Google's own review system to share your genuine experience.
-          Google controls the publication and management of its reviews.
-        </p>
-        <div class="actions">
-          <a class="btn primary"
-             href="https://www.google.com/search?q=Maidh+Taxi+Service+Ambala+City"
-             target="_blank" rel="noopener noreferrer">
-            Find Us on Google
-          </a>
+      <div class="panel" id="contact">
+        <h3>📞 We're Here to Help</h3>
+        <div class="contact-list">
+          <div class="contact-row">
+            <span class="symbol">📱</span>
+            <div><strong>Main contact</strong><small>Calls and WhatsApp</small><br><a href="tel:+919467676070">9467670607</a></div>
+          </div>
+          <div class="contact-row">
+            <span class="symbol">🆘</span>
+            <div><strong>Emergency contact</strong><small>For urgent taxi-related contact</small><br><a href="tel:+919671006004">9671006004</a></div>
+          </div>
+          <div class="contact-row">
+            <span class="symbol">📍</span>
+            <div><strong>Service location</strong><small>Ambala City, Haryana, India</small></div>
+          </div>
         </div>
-        <p class="small">
-          For a direct review link, replace the Google search URL with the
-          review link from your Google Business Profile.
-        </p>
-      </div>
-    </section>
 
-    <section id="contact">
-      <div class="section-heading">
-        <div class="eyebrow">Get in touch</div>
-        <h2>Contact Maidh Taxi Service</h2>
-        <p>Ambala City, Haryana, India</p>
-        <p>Business phone: <strong>9467670607</strong></p>
-        <div class="actions">
-          <a class="btn primary" href="tel:+919467676070">
-            Call Our Business
-          </a>
-          <a class="btn secondary" href="https://wa.me/919467676070">
-            Message on WhatsApp
-          </a>
+        <div class="qr-wrap">
+          <h3>📲 Scan to Visit Our Website</h3>
+          <img id="websiteQR" alt="QR code for Maidh Taxi Service website" width="150" height="150">
+          <p>Scan the code to open our official website.</p>
+          <a href="https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/" target="_blank" rel="noopener">Open official website ↗</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="card" style="text-align:center">
-        <h3>Scan to Visit Our Website</h3>
-        <p>Scan this QR code using your phone camera.</p>
-        <img class="qr"
-          src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2Fmaidhtaxiserviceambala3169.github.io%2Fmaidh-taxi-service%2F"
-          alt="QR code linking to the Maidh Taxi Service website"
-          width="190" height="190">
-        <a class="btn secondary"
-           href="https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/">
-          Open Our Website
-        </a>
+<section class="section" id="feedback">
+  <div class="container">
+    <div class="section-title">
+      <h2>We Value Your Feedback 💛</h2>
+      <p>Share a suggestion or tell us about your experience.</p>
+    </div>
+    <form class="panel" id="feedbackForm" style="max-width:650px;margin:auto">
+      <label for="rating">Your rating</label>
+      <div class="feedback-stars" role="group" aria-label="Choose a rating from one to five stars">
+        <button type="button" class="star" data-rating="1" aria-label="1 star">★</button>
+        <button type="button" class="star" data-rating="2" aria-label="2 stars">★</button>
+        <button type="button" class="star" data-rating="3" aria-label="3 stars">★</button>
+        <button type="button" class="star" data-rating="4" aria-label="4 stars">★</button>
+        <button type="button" class="star" data-rating="5" aria-label="5 stars">★</button>
       </div>
-    </section>
-  </main>
+      <input type="hidden" id="rating" value="5">
 
-  <footer>
-    <strong>MAIDH TAXI SERVICE</strong><br>
-    Ambala City, Haryana<br>
-    Comfortable journeys. Personal service.<br>
-    © <span id="year"></span> Maidh Taxi Service
-  </footer>
+      <label for="feedbackName">Your name (optional)</label>
+      <input id="feedbackName" placeholder="Enter your name">
 
-  <script>
-    let selectedRating = 0;
+      <label for="feedbackMessage">Feedback or suggestion</label>
+      <textarea id="feedbackMessage" placeholder="Tell us what went well or what we can improve." required></textarea>
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+      <button class="btn btn-blue full" type="submit">Send Feedback Privately via WhatsApp</button>
+      <p class="notice">Your feedback opens in WhatsApp for you to send. It is not automatically published on this website.</p>
+    </form>
+  </div>
+</section>
+</main>
 
-    function speak(text) {
-      if (!("speechSynthesis" in window)) {
-        alert("Voice playback is not supported by this browser.");
-        return;
-      }
+<footer>
+  <div class="container footer-row">
+    <div>
+      <strong>🚖 MAIDH TAXI SERVICE</strong>
+      <p>Comfortable journeys. Friendly service.</p>
+      <p>Ambala City, Haryana, India</p>
+    </div>
+    <div>
+      <a href="tel:+919467676070">Call: 9467670607</a>
+      <p><a href="tel:+919671006004">Emergency contact: 9671006004</a></p>
+      <p>© <span id="year"></span> Maidh Taxi Service</p>
+    </div>
+  </div>
+</footer>
 
-      window.speechSynthesis.cancel();
-      const message = new SpeechSynthesisUtterance(text);
-      message.lang = "en-IN";
-      message.rate = 0.9;
-      message.pitch = 1;
-      window.speechSynthesis.speak(message);
-    }
+<div class="bottom-bar" aria-label="Quick contact">
+  <a class="btn btn-blue" href="tel:+919467676070">📞 Call Us</a>
+  <a class="btn btn-green" href="https://wa.me/919467676070?text=Hello%20Maidh%20Taxi%20Service%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" rel="noopener">WhatsApp</a>
+</div>
 
-    function playWelcome() {
-      speak(
-        "Welcome to Maidh Taxi Service, Ambala! " +
-        "Your trusted partner for comfortable, safe and reliable journeys. " +
-        "We offer local taxi services and outstation travel. " +
-        "Book your ride today. Thank you for choosing Maidh Taxi Service!"
-      );
-    }
+<script>
+"use strict";
 
-    function speakFeedbackHelp() {
-      speak(
-        "Please select your star rating and enter your suggestions. " +
-        "Press Send Feedback Privately to prepare a WhatsApp message. " +
-        "Please review it before sending."
-      );
-    }
+const WEBSITE_URL =
+  "https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/";
+const WHATSAPP_NUMBER = "919467676070";
 
-    function stopVoice() {
-      if ("speechSynthesis" in window) {
-        window.speechSynthesis.cancel();
-      }
-    }
+document.getElementById("year").textContent = new Date().getFullYear();
 
-    const starButtons = document.querySelectorAll(".star");
+document.getElementById("websiteQR").src =
+  "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" +
+  encodeURIComponent(WEBSITE_URL);
 
-    starButtons.forEach(function(button) {
-      button.addEventListener("click", function() {
-        selectedRating = Number(button.dataset.rating);
+document.getElementById("voiceBtn").addEventListener("click", function () {
+  if (!("speechSynthesis" in window)) {
+    alert("Voice welcome is not supported by this browser. You can still use the website normally.");
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const welcome = new SpeechSynthesisUtterance(
+    "Welcome to Maidh Taxi Service, Ambala City. Your journey is our priority. Contact us to plan your next trip. We wish you a comfortable journey."
+  );
+  welcome.lang = "en-IN";
+  welcome.rate = 0.92;
+  window.speechSynthesis.speak(welcome);
+});
 
-        starButtons.forEach(function(star) {
-          const chosen = Number(star.dataset.rating) <= selectedRating;
-          star.classList.toggle("selected", chosen);
-          star.setAttribute("aria-pressed", String(
-            Number(star.dataset.rating) === selectedRating
-          ));
-        });
+document.getElementById("bookingForm").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-        document.getElementById("ratingText").textContent =
-          selectedRating + " out of 5 stars selected.";
-      });
+  const name = document.getElementById("customerName").value.trim();
+  const pickup = document.getElementById("pickup").value.trim();
+  const destination = document.getElementById("destination").value.trim();
+  const date = document.getElementById("tripDate").value;
+  const vehicle = document.getElementById("vehicle").value;
+  const notes = document.getElementById("tripNotes").value.trim();
+
+  const message =
+    "Hello Maidh Taxi Service! I would like to request a taxi booking.\n\n" +
+    "Name: " + name + "\n" +
+    "Pickup: " + pickup + "\n" +
+    "Destination: " + destination + "\n" +
+    "Travel date: " + date + "\n" +
+    "Preferred vehicle: " + vehicle + "\n" +
+    "Additional details: " + (notes || "None") + "\n\n" +
+    "Please confirm availability and fare.";
+
+  window.open(
+    "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message),
+    "_blank",
+    "noopener"
+  );
+});
+
+let selectedRating = 5;
+document.querySelectorAll(".star").forEach(function (button) {
+  button.addEventListener("click", function () {
+    selectedRating = Number(button.dataset.rating);
+    document.getElementById("rating").value = String(selectedRating);
+    document.querySelectorAll(".star").forEach(function (star) {
+      const active = Number(star.dataset.rating) <= selectedRating;
+      star.classList.toggle("selected", active);
+      star.setAttribute("aria-pressed", String(Number(star.dataset.rating) === selectedRating));
     });
+  });
+});
+document.querySelectorAll('.star[data-rating="5"]')[0].click();
 
-    document.getElementById("feedbackForm").addEventListener(
-      "submit", function(event) {
-        event.preventDefault();
+document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-        const name = document.getElementById("customerName").value.trim();
-        const suggestions =
-          document.getElementById("suggestions").value.trim();
-        const messageBox = document.getElementById("formMessage");
+  const name = document.getElementById("feedbackName").value.trim() || "Not provided";
+  const feedback = document.getElementById("feedbackMessage").value.trim();
+  const message =
+    "Maidh Taxi Service — Customer Feedback\n\n" +
+    "Name: " + name + "\n" +
+    "Rating: " + selectedRating + "/5 stars\n" +
+    "Feedback: " + feedback + "\n\n" +
+    "Please review this feedback privately.";
 
-        if (selectedRating === 0 && !suggestions) {
-          messageBox.textContent =
-            "Please choose a rating or enter a suggestion.";
-          return;
-        }
-
-        let message = "Maidh Taxi Service - Private Customer Feedback\n";
-        message += "Name: " + (name || "Not provided") + "\n";
-        message += "Rating: " +
-          (selectedRating ? selectedRating + "/5 stars" : "Not provided") +
-          "\n";
-        message += "Suggestions: " + (suggestions || "None provided") +
-          "\n\nPlease review this feedback before any public display.";
-
-        const whatsappURL =
-          "https://wa.me/919467676070?text=" + encodeURIComponent(message);
-
-        messageBox.textContent =
-          "WhatsApp will open with your message. Please review it and press Send.";
-        window.open(whatsappURL, "_blank", "noopener,noreferrer");
-      }
-    );
-  </script>
+  window.open(
+    "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message),
+    "_blank",
+    "noopener"
+  );
+});
+</script>
 </body>
 </html>
