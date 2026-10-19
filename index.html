@@ -2,10 +2,16 @@
 <html lang="en-IN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Maidh Taxi">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <title>Maidh Taxi Service | All India Taxi & Airport Transfers</title>
   <meta name="description" content="Colourful, customer-friendly Maidh Taxi Service website for local rides, All India taxi travel, airport transfers and outstation journeys. Call or WhatsApp 9467670607.">
-  <meta name="theme-color" content="#1769d2">
+  <meta name="theme-color" content="#090d18">
   <meta name="robots" content="index, follow">
   <!-- Keep this Google Search Console verification tag when updating the site. -->
   <meta name="google-site-verification" content="uRoaM_bAw8yTTsswlhWGQ42d6Tj4LWotsFkiiYJtLX4">
@@ -105,19 +111,33 @@
     .btn:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:0 11px 24px #0003}
     @media(max-width:600px){.booking-card{transform:none}.hero h1{font-size:2.3rem}.nav-cta,.btn{min-height:44px}}
 
+    .voice-language{min-height:44px;touch-action:manipulation}
+    .voice-language[aria-pressed="true"]{outline:3px solid #fff;outline-offset:2px}
+    button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
+    input,select,textarea{font-size:16px!important}
+    @media(max-width:850px){.navlinks{gap:9px}.navlinks a{font-size:.86rem}.hero-inner{grid-template-columns:1fr}.booking-card{max-width:none}.vehicle-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.navlinks{display:flex;gap:8px}.navlinks a{padding:6px 0}.navlinks .nav-cta{padding:10px 12px}.vehicle-grid{grid-template-columns:1fr}.voice-language{flex:1 1 135px}.wa-float{bottom:calc(12px + env(safe-area-inset-bottom))}.topbar{font-size:.82rem}.hero{background-position:60% center}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
   </style>
 </head>
 <body>
-  <section class="waheguru-banner" style="text-align:center;padding:12px 10px;background:linear-gradient(90deg,#1769d2,#12b8a6);color:#fff;border-bottom:3px solid #ffc83d" aria-label="Welcome to Maidh Taxi Service">
-    <p style="margin:0;font-weight:800;font-size:clamp(1rem,2.5vw,1.25rem)">🙏 Welcome to Maidh Taxi Service</p>
-    <p style="margin:2px 0 8px;font-size:.9rem">Your journey, our priority · Ambala City, Haryana</p>
-    <button class="btn btn-gold" id="voiceWelcome" type="button" style="padding:8px 13px">🔊 Hear Welcome</button>
+  <section class="waheguru-banner" aria-label="Welcome to Maidh Taxi Service" style="text-align:center;padding:14px 10px;background:linear-gradient(120deg,#05070d,#171d2b 62%,#342719);color:#fff;border-bottom:3px solid #d8b15a">
+    <p style="margin:0;font-weight:900;font-size:clamp(1.05rem,2.5vw,1.3rem);color:#f6e3a4">🙏 ਵਾਹਿਗੁਰੂ ਜੀ, ਤੁਹਾਡਾ ਬਹੁਤ ਸ਼ੁਕਰ ਹੈ 🙏</p>
+    <p style="margin:3px 0 5px;font-weight:800">Waheguru Ji, tuhada bahut shukar hai</p>
+    <p style="margin:0 0 10px;font-size:.92rem">Welcome to Maidh Taxi Service · Ambala City, Haryana</p>
+    <div class="voice-language-buttons" role="group" aria-label="Choose welcome voice language" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-gold voice-language" type="button" data-language="en" style="padding:9px 13px">🔊 English Voice</button>
+      <button class="btn btn-gold voice-language" type="button" data-language="hi" style="padding:9px 13px">🔊 हिंदी आवाज़</button>
+      <button class="btn btn-gold voice-language" type="button" data-language="pa" style="padding:9px 13px">🔊 ਪੰਜਾਬੀ ਆਵਾਜ਼</button>
+      <button class="btn btn-blue" id="installWebsite" type="button" style="padding:9px 13px">📲 Add to Home Screen</button>
+    </div>
+    <p id="voiceStatus" class="sr-only" role="status" aria-live="polite"></p>
   </section>
   <div class="topbar"><div class="wrap"><span>All India Taxi Service · Local, Outstation & Airport Transfers</span><span>Call/WhatsApp: <a href="tel:+919467670607">+91 94676 70607</a></span></div></div>
   <header>
     <div class="wrap nav">
       <a class="brand" href="#home" aria-label="Maidh Taxi Service home"><span class="brand-mark" aria-hidden="true">MT</span><span><strong>Maidh Taxi Service</strong><small>Your journey, our priority</small></span></a>
-      <nav class="navlinks" aria-label="Main navigation"><a href="#services">Services</a><a href="#vehicles">Cars</a><a href="#routes">All India</a><a href="#how-to-book">How to book</a><a href="#contact">Contact</a><a class="nav-cta" href="#booking">Book a Taxi ↗</a></nav>
+      <nav class="navlinks" aria-label="Main navigation"><a href="#services">Services</a><a href="#vehicles">Cars</a><a href="#service-areas">Service Areas</a><a href="#routes">All India</a><a href="#how-to-book">How to book</a><a href="#contact">Contact</a><a class="nav-cta" href="#booking">Book a Taxi ↗</a></nav>
     </div>
   </header>
   <main>
@@ -165,6 +185,8 @@
       <article class="fleet-card"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=85" alt="Modern passenger car for airport and city transfers" loading="lazy"><div class="fleet-body"><h3>Swift, Aura or similar</h3><p>Ask about an economical small-car option when suitable for your trip.</p><span class="fleet-tag">Hatchback / compact sedan</span></div></article>
       <article class="fleet-card"><img src="https://images.unsplash.com/photo-1518306721680-2e7b9b9b4b1a?auto=format&fit=crop&w=900&q=85" alt="Road travel vehicle for a group journey" loading="lazy"><div class="fleet-body"><h3>Tempo Traveller / group vehicle</h3><p>For larger groups, ask us to check the right seating capacity and availability.</p><span class="fleet-tag">Group travel · On request</span></div></article>
     </div><div class="center-action" style="text-align:center;margin-top:28px"><a class="btn btn-blue" href="#booking">Choose a vehicle and request booking ↗</a></div></div></section>
+    <section id="service-areas" style="background:#fffdf8;padding:48px 0"><div class="wrap"><div class="section-head"><div class="eyebrow">Our service region</div><h2>Serving Punjab, Haryana, Delhi & Chandigarh</h2><p>Book local, intercity, airport and outstation taxi journeys. All India travel enquiries are also welcome; availability and fares are confirmed before booking.</p></div><div class="route-pills" aria-label="Main service areas"><span>📍 Punjab</span><span>📍 Haryana</span><span>📍 Delhi</span><span>📍 Chandigarh</span><span>🇮🇳 All India enquiries</span></div></div></section>
+
     <section class="all-india" id="routes"><div class="wrap"><div class="section-head"><div class="eyebrow">From your city to your destination</div><h2>All India taxi travel enquiries</h2><p>Tell us where your journey starts and ends. Routes, vehicle options, estimated fare and availability can be discussed directly before confirming your booking.</p></div><div class="route-pills" aria-label="Example route types"><span>City to city</span><span>Airport pickup & drop</span><span>One-way journeys</span><span>Round trips</span><span>Family travel</span><span>Business travel</span><span>Outstation trips</span></div><div class="center-action"><a class="btn btn-gold" href="#booking">Share your route on WhatsApp ↗</a></div></div></section>
     <section class="fare-policy" id="fare-policy"><div class="wrap"><div class="section-head"><div class="eyebrow">Clear terms before you travel</div><h2>Fare, extra charges & payment terms</h2><p>Discuss and confirm the complete trip estimate and terms with Maidh Taxi Service before the booking is finalised.</p></div><div class="policy-grid"><article class="policy-card"><h3>Charges to discuss before booking</h3><p>Please ask us to explain which charges apply to your specific trip. Depending on the route and arrangement, these may include:</p><ul><li>Late-night or early-morning charges, if applicable</li><li>Food or driver allowance, if applicable</li><li>Parking fees</li><li>Tolls, state taxes and other route-related taxes</li><li>Extra kilometres, waiting time, route changes or additional travel</li></ul><div class="policy-note"><strong>No surprises:</strong> Any applicable extra charges should be discussed with you and agreed before the booking is confirmed. Ask for the final fare breakdown in writing on WhatsApp.</div></article><article class="policy-card"><h3>Proposed payment schedule</h3><p>Payment schedule to be confirmed with the booking team before you pay:</p><div class="payment-steps"><div class="payment-step"><strong>20%</strong><span>At booking confirmation</span></div><div class="payment-step"><strong>60%</strong><span>At pickup time</span></div><div class="payment-step"><strong>20%</strong><span>Before drop-off</span></div></div><div class="policy-note">The percentages are based on the agreed trip amount. Confirm the total fare, payment method, cancellation/refund terms and any exceptions with us before making a payment. Do not pay until you have received booking confirmation.</div></article></div></div></section>
     <section class="terms-section" id="charges"><div class="wrap"><div class="section-head"><div class="eyebrow">Clear terms before you travel</div><h2>Fare, extra charges & payment schedule</h2><p>We discuss and confirm the trip fare, vehicle, inclusions and any applicable extra charges with you before the booking is finalised.</p></div><div class="terms-grid"><article class="terms-card"><h3>Charges to discuss before booking</h3><ul><li>Late-night or early-morning travel charges, if applicable</li><li>Food or driver allowance, if applicable</li><li>Parking and airport entry charges, if applicable</li><li>Applicable tolls, state taxes and other government charges</li><li>Extra kilometres, extra hours, route changes, waiting time or additional travel</li><li>Any other charge relevant to the specific trip</li></ul></article><article class="terms-card"><h3>Proposed payment schedule</h3><p style="margin-top:0;color:var(--muted)">Based on the total fare agreed with you:</p><div class="payment-steps"><div class="payment-step"><strong>20%</strong><span>At booking confirmation</span></div><div class="payment-step"><strong>60%</strong><span>At pickup time</span></div><div class="payment-step"><strong>20%</strong><span>Before drop-off</span></div></div><p style="color:var(--muted);font-size:.9rem;margin-bottom:0;margin-top:14px">The exact amount, payment method and timing will be confirmed directly with you before payment.</p></article></div><div class="terms-note"><strong>Please note:</strong> Do not assume extra charges are included in the base fare. Ask us to list and confirm all applicable charges and the total payable amount on WhatsApp before you confirm the booking or make a payment. Enjoy your journey with Maidh Taxi Service!</div></div></section>
@@ -242,17 +264,50 @@
       document.getElementById('pickup').addEventListener('input', updateMapLinks);
       document.getElementById('dropoff').addEventListener('input', updateMapLinks);
 
-      // Voice welcome uses the browser's built-in speech synthesis; no recording is sent.
-      document.getElementById('voiceWelcome').addEventListener('click', function () {
-        if (!('speechSynthesis' in window)) { alert('Voice welcome is not supported by this browser. You can still use the website normally.'); return; }
-        window.speechSynthesis.cancel();
-        var welcome = new SpeechSynthesisUtterance('Welcome to Maidh Taxi Service, Ambala City, Haryana. Your journey is our priority. Enter your pickup and drop locations, choose your travel date, and contact us on WhatsApp to request your booking. Please confirm your fare and all conditions before making payment. Have a comfortable journey.');
-        welcome.lang = 'en-IN'; welcome.rate = 0.92; window.speechSynthesis.speak(welcome);
+      // Multilingual welcome voice: uses built-in device speech; no recording is sent.
+      var voiceMessages = {
+        en: { lang: 'en-IN', text: 'Waheguru Ji, thank you so much. Welcome to Maidh Taxi Service, Ambala City, Haryana. We serve Punjab, Haryana, Delhi, Chandigarh and accept travel enquiries across India. Please enter your pickup and drop locations, choose your travel date, and send your booking request on WhatsApp. Please confirm the final fare and all charges before making payment. Have a safe and comfortable journey.' },
+        hi: { lang: 'hi-IN', text: 'वाहेगुरु जी, आपका बहुत बहुत धन्यवाद। मैध टैक्सी सर्विस, अंबाला सिटी, हरियाणा में आपका स्वागत है। हम पंजाब, हरियाणा, दिल्ली और चंडीगढ़ में सेवा देते हैं और पूरे भारत के लिए यात्रा संबंधी अनुरोध भी स्वीकार करते हैं। कृपया पिकअप और ड्रॉप की जगह तथा यात्रा की तारीख भरें और व्हाट्सऐप पर बुकिंग अनुरोध भेजें। भुगतान करने से पहले किराया और सभी अतिरिक्त शुल्क की पुष्टि अवश्य करें। आपकी यात्रा सुरक्षित और आरामदायक हो।' },
+        pa: { lang: 'pa-IN', text: 'ਵਾਹਿਗੁਰੂ ਜੀ, ਤੁਹਾਡਾ ਬਹੁਤ ਬਹੁਤ ਸ਼ੁਕਰ ਹੈ। ਮੈਧ ਟੈਕਸੀ ਸਰਵਿਸ, ਅੰਬਾਲਾ ਸਿਟੀ, ਹਰਿਆਣਾ ਵਿੱਚ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ। ਅਸੀਂ ਪੰਜਾਬ, ਹਰਿਆਣਾ, ਦਿੱਲੀ ਅਤੇ ਚੰਡੀਗੜ੍ਹ ਵਿੱਚ ਸੇਵਾ ਦਿੰਦੇ ਹਾਂ ਅਤੇ ਪੂਰੇ ਭਾਰਤ ਲਈ ਯਾਤਰਾ ਦੀਆਂ ਬੇਨਤੀਆਂ ਵੀ ਸਵੀਕਾਰ ਕਰਦੇ ਹਾਂ। ਕਿਰਪਾ ਕਰਕੇ ਪਿਕਅੱਪ ਅਤੇ ਡਰੌਪ ਦੀ ਥਾਂ ਅਤੇ ਯਾਤਰਾ ਦੀ ਤਾਰੀਖ ਭਰੋ ਅਤੇ ਵਟਸਐਪ ਰਾਹੀਂ ਬੁਕਿੰਗ ਦੀ ਬੇਨਤੀ ਭੇਜੋ। ਭੁਗਤਾਨ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕਿਰਾਏ ਅਤੇ ਸਾਰੇ ਵਾਧੂ ਖਰਚਿਆਂ ਦੀ ਪੁਸ਼ਟੀ ਜ਼ਰੂਰ ਕਰੋ। ਤੁਹਾਡਾ ਸਫ਼ਰ ਸੁਰੱਖਿਅਤ ਅਤੇ ਸੁਖਦ ਹੋਵੇ।' }
+      };
+      document.querySelectorAll('.voice-language').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var selected = voiceMessages[button.getAttribute('data-language')];
+          var status = document.getElementById('voiceStatus');
+          if (!('speechSynthesis' in window) || typeof SpeechSynthesisUtterance === 'undefined') {
+            status.textContent = 'Voice playback is not supported by this browser. You can still use the website and booking form.';
+            alert(status.textContent);
+            return;
+          }
+          window.speechSynthesis.cancel();
+          document.querySelectorAll('.voice-language').forEach(function (item) { item.setAttribute('aria-pressed', String(item === button)); });
+          var welcome = new SpeechSynthesisUtterance(selected.text);
+          welcome.lang = selected.lang;
+          welcome.rate = 0.88;
+          welcome.onerror = function () { status.textContent = 'Your device could not play this voice. Try another language or browser.'; };
+          status.textContent = 'Playing welcome message in ' + selected.lang + '.';
+          window.speechSynthesis.speak(welcome);
+        });
       });
 
       // QR code points only to the official GitHub Pages site.
       var siteUrl = 'https://maidhtaxiserviceambala3169.github.io/maidh-taxi-service/';
-      document.getElementById('websiteQR').src = 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(siteUrl);
+      var qrImage = document.getElementById('websiteQR');
+      qrImage.src = 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(siteUrl);
+      qrImage.onerror = function () { this.alt = 'QR code could not load. Use the official website link beside this image.'; this.style.display = 'none'; };
+
+      // If a remote vehicle/service image fails, replace it with a lightweight branded fallback.
+      document.querySelectorAll('img').forEach(function (img) {
+        if (img.id === 'websiteQR') return;
+        img.addEventListener('error', function () {
+          if (img.dataset.fallbackApplied) return;
+          img.dataset.fallbackApplied = 'true';
+          var label = (img.alt || 'Maidh Taxi Service').replace(/[<>&"']/g, ' ').slice(0, 72);
+          var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#090d18"/><stop offset="1" stop-color="#342719"/></linearGradient></defs><rect width="900" height="500" fill="url(#g)"/><path d="M185 300h530l-40-105q-12-30-45-30H300q-35 0-50 32z" fill="#d8b15a" stroke="#f6e3a4" stroke-width="8"/><rect x="300" y="190" width="135" height="78" rx="12" fill="#eaf1fa"/><rect x="450" y="190" width="145" height="78" rx="12" fill="#eaf1fa"/><circle cx="300" cy="310" r="43" fill="#101522" stroke="#d8b15a" stroke-width="12"/><circle cx="610" cy="310" r="43" fill="#101522" stroke="#d8b15a" stroke-width="12"/><text x="450" y="410" fill="#f6e3a4" font-size="30" font-family="Arial" font-weight="700" text-anchor="middle">MAIDH TAXI SERVICE</text><text x="450" y="455" fill="#ffffff" font-size="18" font-family="Arial" text-anchor="middle">' + label + '</text></svg>';
+          img.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+        });
+        if (img.complete && img.naturalWidth === 0) img.dispatchEvent(new Event('error'));
+      });
 
       // Feedback is composed for WhatsApp; it is not saved or published automatically.
       var selectedStars = 5;
@@ -273,6 +328,36 @@
         var message = 'Maidh Taxi Service — Customer Feedback\n\nName: ' + name + '\nRating: ' + selectedStars + '/5 stars\nFeedback: ' + feedback + '\n\nPlease review this feedback privately. This is not a public website review.';
         window.location.assign('https://wa.me/919467670607?text=' + encodeURIComponent(message));
       });
+    }());
+  </script>
+
+  <script>
+    // Progressive Web App support. Android/desktop may show an install prompt; iOS uses Safari's Share menu.
+    (function () {
+      if ('serviceWorker' in navigator && location.protocol === 'https:') {
+        window.addEventListener('load', function () { navigator.serviceWorker.register('./sw.js').catch(function () {}); });
+      }
+      var installButton = document.getElementById('installWebsite');
+      var deferredPrompt = null;
+      window.addEventListener('beforeinstallprompt', function (event) {
+        event.preventDefault();
+        deferredPrompt = event;
+        installButton.style.display = 'inline-flex';
+      });
+      installButton.addEventListener('click', function () {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then(function () { deferredPrompt = null; });
+          return;
+        }
+        var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        if (isIOS) {
+          alert('To add Maidh Taxi Service to your iPhone/iPad home screen: open this website in Safari, tap Share, then choose “Add to Home Screen”.');
+        } else {
+          alert('If your browser supports installation, open its menu and choose “Install app” or “Add to Home screen”. This website also works directly in your browser.');
+        }
+      });
+      window.addEventListener('appinstalled', function () { installButton.textContent = '✓ Website Added'; });
     }());
   </script>
 </body>
