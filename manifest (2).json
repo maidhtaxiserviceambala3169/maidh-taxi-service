@@ -1,0 +1,11 @@
+{
+  "name": "Maidh Taxi Service",
+  "short_name": "Maidh Taxi",
+  "description": "Taxi booking requests in Ambala City, Haryana",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "icons": []
+}
