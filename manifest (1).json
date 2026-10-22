@@ -1,0 +1,11 @@
+{
+  "name": "Maidh Taxi Service",
+  "short_name": "Maidh Taxi",
+  "description": "Customer taxi booking and driver application for Maidh Taxi Service, Ambala.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#111111",
+  "icons": []
+}
