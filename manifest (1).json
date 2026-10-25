@@ -1,11 +1,23 @@
 {
   "name": "Maidh Taxi Service",
   "short_name": "Maidh Taxi",
-  "description": "Customer taxi booking and driver application for Maidh Taxi Service, Ambala.",
   "start_url": "./",
-  "scope": "./",
   "display": "standalone",
-  "background_color": "#f7f5ef",
-  "theme_color": "#111111",
-  "icons": []
+  "background_color": "#082b55",
+  "theme_color": "#082b55",
+  "description": "Local, airport, outstation and All India taxi enquiries from Ambala.",
+  "icons": [
+    {
+      "src": "./assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
 }
