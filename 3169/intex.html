@@ -65,5 +65,73 @@
       <p>WhatsApp: 9467670607</p>
     </div>
   </main>
-</body>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBVGUUhf6-stBTlUBVcSlHsSPaYqLk5gcI",
+  authDomain: "maidh-taxi-service.firebaseapp.com",
+  projectId: "maidh-taxi-service",
+  storageBucket: "maidh-taxi-service.firebasestorage.app",
+  messagingSenderId: "346666820512",
+  appId: "1:346666820512:web:071b4b3d5fe30fdad9bac5",
+  measurementId: "G-8B8SM3K1VP"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const form = document.getElementById("bookingForm");
+const message = document.getElementById("bookingMessage");
+const submitButton = form?.querySelector('button[type="submit"]');
+
+form?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  if (!form.reportValidity()) return;
+
+  const inputs = form.querySelectorAll("input");
+  const [name, mobile, pickup, destination, date] =
+    Array.from(inputs).map(input => input.value.trim());
+
+  if (!name || !mobile || !pickup || !destination || !date) {
+    message.textContent = "Please complete all booking fields.";
+    return;
+  }
+
+  submitButton.disabled = true;
+  message.textContent = "Sending your booking...";
+
+  try {
+    await addDoc(collection(db, "bookings"), {
+      customerName: name,
+      mobile: mobile,
+      pickup: pickup,
+      destination: destination,
+      travelDate: date,
+      status: "pending",
+      createdAt: serverTimestamp()
+    });
+
+    message.textContent =
+      "Booking received! Our team will contact you soon.";
+    form.reset();
+
+  } catch (error) {
+    console.error("Booking submission failed:", error);
+    message.textContent =
+      "Booking could not be confirmed. Please contact us on WhatsApp: 9467670607.";
+  } finally {
+    submitButton.disabled = false;
+  }
+});
+      </script>
+      </body>
 </html>
